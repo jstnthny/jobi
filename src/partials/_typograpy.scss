@@ -1,0 +1,22 @@
+@use "./variables";
+
+h1,h2,h3,h4,h5,p, button{
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+}
+
+
+ h1{
+        text-align: center;
+        font-family: variables.$garmond;
+        font-size: 5.63rem;
+        span{
+            display: block;
+        }
+    }
+
+    .homePageHeader > p{
+        font-family: variables.$garmond;
+        font-size: 1.25rem;        
+        margin: 20px 0 40px;
+    }

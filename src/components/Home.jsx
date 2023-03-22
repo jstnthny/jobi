@@ -10,30 +10,36 @@ export default function Home(){
             <Header />
             <div className="homepage">
                 <div className="homePageHeader">
-                    <h1>Find your job without any hassle.</h1>
+                    <h1>Find your job without <span>any hassle.</span></h1>
                     <p>Jobs & Job search. Find jobs in global. Executive jobs & work.</p>
-                    <div>
-                        <label htmlFor="jobCategories">Job Categories</label>
-                        <select name="jobCategories" id="">
-                            <option value="">Designer</option>
-                        </select>
-                        <label htmlFor="location">Location</label>
-                        <select name="location" id="">
-                            <option value="">California, CA</option>
-                        </select>
-                        <label htmlFor="keywordsTitle">Keywords or Title</label>
-                        <select name="keywordsTitle" id="">
-                            <option value="">Design, branding</option>
-                        </select>
+                    <div className="searchMenu">
+                        <div>
+                            <label htmlFor="jobCategories">Job Categories</label>
+                            <select name="jobCategories" id="">
+                                <option value="">Designer</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label htmlFor="location">Location</label>
+                            <select name="location" id="">
+                                <option value="">California, CA</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label htmlFor="keywordsTitle">Keywords or Title</label>
+                            <input type="text" placeholder="Design, branding" />
+                        </div>
                         <button>
                             Search
                         </button>
                     </div>
-                    <p>Upload your cv <span><svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.94406 0C9.98306 0 10.0213 0.00328987 10.0585 0.00960702L10.1809 0.0103295C10.3658 0.0103295 10.5425 0.0855356 10.6711 0.218732L15.2614 5.00021C15.3819 5.12616 15.45 5.2956 15.45 5.47048V13.7975C15.4644 16.0709 13.692 17.9185 11.415 18H4.03939C1.8283 17.9525 0.0550035 16.1657 0.000331331 13.9771L0 4.06874C0.0534598 1.82071 1.90915 0.0103295 4.13996 0.0103295L9.82963 0.00960702C9.86684 0.00328987 9.90507 0 9.94406 0ZM9.26395 1.36911L4.14268 1.36948C2.64128 1.36948 1.39448 2.58546 1.35915 4.08505V13.7975C1.32653 15.3388 2.5407 16.6073 4.06747 16.6409H11.3915C12.9037 16.5865 14.1007 15.3388 14.0908 13.802L14.0907 6.32728L12.2709 6.32819C10.6119 6.32366 9.26449 4.97176 9.26449 3.31541L9.26395 1.36911ZM7.376 6.48667C7.56356 6.48667 7.73346 6.56278 7.85646 6.68578L7.85741 6.68637L9.98312 8.82114C10.2477 9.08753 10.2468 9.51702 9.9813 9.7816C9.71491 10.0462 9.28451 10.0462 9.01993 9.77979L8.05521 8.8109L8.05557 12.64C8.05557 13.0151 7.75112 13.3195 7.376 13.3195C7.00088 13.3195 6.69643 13.0151 6.69643 12.64L6.69606 8.8109L5.73261 9.77979C5.60032 9.91389 5.42544 9.98003 5.25147 9.98003C5.07841 9.98003 4.90444 9.91389 4.77215 9.7816C4.50666 9.51702 4.50485 9.08753 4.77033 8.82114L6.89423 6.68637L6.92454 6.65843C6.93764 6.64676 6.95121 6.6356 6.96519 6.62497L6.89423 6.68637C6.9195 6.66101 6.9467 6.63816 6.97545 6.61781C7.08736 6.53533 7.22603 6.48667 7.376 6.48667ZM10.6231 2.13114L10.6236 3.31541C10.6236 4.22514 11.363 4.96632 12.2727 4.96904L13.3459 4.96814L10.6231 2.13114Z" fill="black"/>
-                        </svg>
-                        </span>
-                    </p>
+                    <div className="cvUpload">
+                        <p>Upload your cv <span><svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.94406 0C9.98306 0 10.0213 0.00328987 10.0585 0.00960702L10.1809 0.0103295C10.3658 0.0103295 10.5425 0.0855356 10.6711 0.218732L15.2614 5.00021C15.3819 5.12616 15.45 5.2956 15.45 5.47048V13.7975C15.4644 16.0709 13.692 17.9185 11.415 18H4.03939C1.8283 17.9525 0.0550035 16.1657 0.000331331 13.9771L0 4.06874C0.0534598 1.82071 1.90915 0.0103295 4.13996 0.0103295L9.82963 0.00960702C9.86684 0.00328987 9.90507 0 9.94406 0ZM9.26395 1.36911L4.14268 1.36948C2.64128 1.36948 1.39448 2.58546 1.35915 4.08505V13.7975C1.32653 15.3388 2.5407 16.6073 4.06747 16.6409H11.3915C12.9037 16.5865 14.1007 15.3388 14.0908 13.802L14.0907 6.32728L12.2709 6.32819C10.6119 6.32366 9.26449 4.97176 9.26449 3.31541L9.26395 1.36911ZM7.376 6.48667C7.56356 6.48667 7.73346 6.56278 7.85646 6.68578L7.85741 6.68637L9.98312 8.82114C10.2477 9.08753 10.2468 9.51702 9.9813 9.7816C9.71491 10.0462 9.28451 10.0462 9.01993 9.77979L8.05521 8.8109L8.05557 12.64C8.05557 13.0151 7.75112 13.3195 7.376 13.3195C7.00088 13.3195 6.69643 13.0151 6.69643 12.64L6.69606 8.8109L5.73261 9.77979C5.60032 9.91389 5.42544 9.98003 5.25147 9.98003C5.07841 9.98003 4.90444 9.91389 4.77215 9.7816C4.50666 9.51702 4.50485 9.08753 4.77033 8.82114L6.89423 6.68637L6.92454 6.65843C6.93764 6.64676 6.95121 6.6356 6.96519 6.62497L6.89423 6.68637C6.9195 6.66101 6.9467 6.63816 6.97545 6.61781C7.08736 6.53533 7.22603 6.48667 7.376 6.48667ZM10.6231 2.13114L10.6236 3.31541C10.6236 4.22514 11.363 4.96632 12.2727 4.96904L13.3459 4.96814L10.6231 2.13114Z" fill="black"/>
+                            </svg>
+                            </span>
+                        </p>
+                    </div>
                 </div>
                 {/* Start Of Categories Div */}
                 <div className="categories">
@@ -208,7 +214,7 @@ export default function Home(){
                             How does the free trial work?
                         </p>
                         <p className="answer">
-                            Answer
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
                         </p>
                     </div>
                     <p>Can't find the answer? We can help. <a href="#">Click here</a></p>

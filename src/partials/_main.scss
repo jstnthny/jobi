@@ -30,3 +30,76 @@ nav{
         }
     }
 }
+
+// Home page Header
+
+.homePageHeader{
+    background-color: variables.$headerBg;
+    text-align: center;
+    padding-bottom: 10px;
+    .cvUpload{
+        p{
+            border-bottom: 1px solid black;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 20px 0 6px 0;
+            font-weight: bold;
+            span{
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.searchMenu{
+    background-color: #fff;
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+    // gap: 6rem;
+    padding: 20px 10px;
+    border-radius: 10px;
+     button{
+            background-color: variables.$logoGreen;
+            border: 1px solid variables.$logoGreen;
+            font-family: variables.$gordita;
+            font-size: 0.9rem;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 22px;
+            text-transform: uppercase;
+        }
+    div{
+        display:flex;
+        flex-direction: column;
+        border-right: 1px solid variables.$grey;
+        padding: 0 20px 0 20px;
+        font-family: variables.$gordita;
+        label{
+            color: #9197AD;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        select{
+            border: none;
+            padding-right: 55px;
+            position: relative;
+            right: 3px;
+            font-weight: bold;
+        }
+        input{
+            border: none;
+            &::placeholder{
+                font-weight: bold;
+                color: black;
+            }
+        }
+    }
+    div:last-of-type{
+        border: none;
+    }
+}

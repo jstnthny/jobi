@@ -218,7 +218,7 @@ template {
   overflow: hidden;
 }
 
-* {
+*, h1, h2, h3, h4 {
   padding: 0;
   margin: 0;
 }
@@ -253,4 +253,98 @@ nav ul .register {
   background-color: #00BF58;
   color: white;
   border-radius: 20px;
+}
+
+.homePageHeader {
+  background-color: #E9EAEC;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.homePageHeader .cvUpload p {
+  border-bottom: 1px solid black;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px 0 6px 0;
+  font-weight: bold;
+}
+.homePageHeader .cvUpload p span {
+  vertical-align: middle;
+}
+
+.searchMenu {
+  background-color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+.searchMenu button {
+  background-color: #00BF58;
+  border: 1px solid #00BF58;
+  font-family: "Gordita";
+  font-size: 0.9rem;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 22px;
+  text-transform: uppercase;
+}
+.searchMenu div {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #C4C4C4;
+  padding: 0 20px 0 20px;
+  font-family: "Gordita";
+}
+.searchMenu div label {
+  color: #9197AD;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+.searchMenu div select {
+  border: none;
+  padding-right: 55px;
+  position: relative;
+  right: 3px;
+  font-weight: bold;
+}
+.searchMenu div input {
+  border: none;
+}
+.searchMenu div input::-moz-placeholder {
+  font-weight: bold;
+  color: black;
+}
+.searchMenu div input::placeholder {
+  font-weight: bold;
+  color: black;
+}
+.searchMenu div:last-of-type {
+  border: none;
+}
+
+h1, h2, h3, h4, h5, p, button {
+  line-height: 1.2;
+  letter-spacing: 1.2px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  font-size: 5.63rem;
+}
+h1 span {
+  display: block;
+}
+
+.homePageHeader > p {
+  font-family: "EB Garamond", serif;
+  font-size: 1.25rem;
+  margin: 20px 0 40px;
 }/*# sourceMappingURL=App.css.map */
