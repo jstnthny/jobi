@@ -7,4 +7,15 @@ nav{
     justify-content: space-around;
     background-color: variables.$headerBg;
     padding-top: 20px;
+    ul{
+        font-family: variables.$gordita;
+        list-style: none;
+        display: flex;        
+        gap: 25px;
+        a{
+            text-decoration: none;
+            color: variables.$black;
+            font-weight: bold;
+        }
+    }
 }

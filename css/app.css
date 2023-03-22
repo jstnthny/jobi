@@ -233,4 +233,15 @@ nav {
   justify-content: space-around;
   background-color: #E9EAEC;
   padding-top: 20px;
+}
+nav ul {
+  font-family: "Gordita";
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+nav ul a {
+  text-decoration: none;
+  color: #0F1620;
+  font-weight: bold;
 }/*# sourceMappingURL=App.css.map */
