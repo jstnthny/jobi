@@ -6,16 +6,27 @@ nav{
     display: flex;
     justify-content: space-around;
     background-color: variables.$headerBg;
-    padding-top: 20px;
+    padding: 40px 0;
+    align-items: center;
     ul{
         font-family: variables.$gordita;
         list-style: none;
         display: flex;        
         gap: 25px;
+        font-weight: bold;
         a{
             text-decoration: none;
             color: variables.$black;
-            font-weight: bold;
+        }
+
+        .login, .register{
+            padding: 16px 27px;
+        }
+
+        .register{
+            background-color: variables.$logoGreen;
+            color: white;
+            border-radius: 20px;
         }
     }
 }

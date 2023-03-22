@@ -232,16 +232,25 @@ nav {
   display: flex;
   justify-content: space-around;
   background-color: #E9EAEC;
-  padding-top: 20px;
+  padding: 40px 0;
+  align-items: center;
 }
 nav ul {
   font-family: "Gordita";
   list-style: none;
   display: flex;
   gap: 25px;
+  font-weight: bold;
 }
 nav ul a {
   text-decoration: none;
   color: #0F1620;
-  font-weight: bold;
+}
+nav ul .login, nav ul .register {
+  padding: 16px 27px;
+}
+nav ul .register {
+  background-color: #00BF58;
+  color: white;
+  border-radius: 20px;
 }/*# sourceMappingURL=App.css.map */

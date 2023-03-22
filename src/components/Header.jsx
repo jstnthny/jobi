@@ -21,8 +21,8 @@ export default function Header(){
                 </ul>
 
                 <ul>
-                    <li>Login</li>
-                    <li>Register</li>
+                    <li className="login">Login</li>
+                    <li className="register">Register</li>
                 </ul>
             </nav>
         </header>
