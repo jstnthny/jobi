@@ -24,3 +24,23 @@ p{
         font-size: 1.25rem;        
         margin: 20px 0 40px;
     }
+
+    .positionAndLogo > h4{
+        font-family: variables.$gordita;
+        font-size: 1.25rem;
+        max-width: 400px;
+    }
+
+    .jobDate{
+        .employmentType{
+            color: variables.$logoGreen;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p{
+            font-weight: 100;
+        }
+        span{
+            font-weight: bold;
+        }
+    }

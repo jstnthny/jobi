@@ -134,19 +134,76 @@ export default function Home(){
                 </div>
                 {/* End of Categories Div */}
                 {/* Start of Job Listings Div */}
-                <div className="jobListings">
-                    <div>
+                <div className="jobListings wrapper">
+                    <div className="jobListingsTitleContainer">
                         <h2>New job listing</h2>
                         <a href="#">Explore all jobs {">"}</a>
                     </div>
                     <div className="listings">
-                        {/* mapped from firebase? */}
+                        {/* Start of Job Listing */}
+                        <div className="jobListing">
+                            <div className="positionAndLogo">
+                                <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="47.2022" height="50" fill="black" fill-opacity="0.2"/>
+                                </svg>
+                                <h4>Developer & expert in java c++</h4>
+                            </div>
+                            <div className="jobDate">
+                                <p className="employmentType">Fulltime</p>
+                                <p>18 Jul 2018 by <span>slack</span></p>
+                            </div>
+                            <div className="jobLocation">
+                                <p>Spain, Barcelona</p>
+                                <p>Developer, Coder</p>
+                            </div>
+                            <div className="jobButtons">
+                                <div className="bookmark">
+                                    <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M34.4998 18.1501C34.4998 27.5419 26.8886 35.1551 17.4999 35.1551C8.11126 35.1551 0.5 27.5419 0.5 18.1501C0.5 8.7584 8.11126 1.14514 17.4999 1.14514C26.8886 1.14514 34.4998 8.7584 34.4998 18.1501Z" stroke="#D6D6D6"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.3889 9.17383C23.0955 9.17383 24.6482 10.5522 24.6482 12.9535V24.8868C24.6482 25.3876 24.3977 25.8383 23.9764 26.0903C23.5567 26.3431 23.0508 26.3481 22.6263 26.1018L17.8707 23.3377L13.0712 26.1075C12.8638 26.2274 12.6364 26.2881 12.4082 26.2881C12.1728 26.2881 11.9374 26.2233 11.7235 26.0936C11.303 25.8415 11.0525 25.3908 11.0525 24.8909V12.8032C11.0525 10.4964 12.606 9.17383 15.315 9.17383H20.3889ZM20.3889 10.4053H15.315C13.2811 10.4053 12.2494 11.2114 12.2494 12.8032V24.8909C12.2494 24.9681 12.2925 25.0099 12.3284 25.0313C12.3643 25.0543 12.4209 25.0707 12.4864 25.0329L17.5787 22.0939C17.7606 21.9897 17.9832 21.9888 18.1659 22.0947L23.2144 25.0288C23.2806 25.0682 23.3372 25.0502 23.3732 25.028C23.4091 25.0058 23.4514 24.964 23.4514 24.8868L23.4511 12.8599C23.445 12.1534 23.3122 10.4053 20.3889 10.4053ZM20.7391 14.6976C21.0694 14.6976 21.3375 14.9734 21.3375 15.3133C21.3375 15.6532 21.0694 15.929 20.7391 15.929H14.8999C14.5696 15.929 14.3015 15.6532 14.3015 15.3133C14.3015 14.9734 14.5696 14.6976 14.8999 14.6976H20.7391Z" fill="#CBCBCB"/>
+                                    </svg>
+                                </div>
+                                <button className="apply">
+                                    Apply
+                                </button>
+                            </div>
+                        </div>
+                        {/* End of Job listing */}
+                         {/* Start of Job Listing */}
+                        <div className="jobListing">
+                            <div className="positionAndLogo">
+                                <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="47.2022" height="50" fill="black" fill-opacity="0.2"/>
+                                </svg>
+                                <h4>Animator & Expert in maya 3D</h4>
+                            </div>
+                            <div className="jobDate">
+                                <p className="employmentType">Part time</p>
+                                <p>18 Jul 2018 by <span>google</span></p>
+                            </div>
+                            <div className="jobLocation">
+                                <p>USA, New York</p>
+                                <p>Finance, Accounting</p>
+                            </div>
+                            <div className="jobButtons">
+                                <div className="bookmark">
+                                    <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M34.4998 18.1501C34.4998 27.5419 26.8886 35.1551 17.4999 35.1551C8.11126 35.1551 0.5 27.5419 0.5 18.1501C0.5 8.7584 8.11126 1.14514 17.4999 1.14514C26.8886 1.14514 34.4998 8.7584 34.4998 18.1501Z" stroke="#D6D6D6"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.3889 9.17383C23.0955 9.17383 24.6482 10.5522 24.6482 12.9535V24.8868C24.6482 25.3876 24.3977 25.8383 23.9764 26.0903C23.5567 26.3431 23.0508 26.3481 22.6263 26.1018L17.8707 23.3377L13.0712 26.1075C12.8638 26.2274 12.6364 26.2881 12.4082 26.2881C12.1728 26.2881 11.9374 26.2233 11.7235 26.0936C11.303 25.8415 11.0525 25.3908 11.0525 24.8909V12.8032C11.0525 10.4964 12.606 9.17383 15.315 9.17383H20.3889ZM20.3889 10.4053H15.315C13.2811 10.4053 12.2494 11.2114 12.2494 12.8032V24.8909C12.2494 24.9681 12.2925 25.0099 12.3284 25.0313C12.3643 25.0543 12.4209 25.0707 12.4864 25.0329L17.5787 22.0939C17.7606 21.9897 17.9832 21.9888 18.1659 22.0947L23.2144 25.0288C23.2806 25.0682 23.3372 25.0502 23.3732 25.028C23.4091 25.0058 23.4514 24.964 23.4514 24.8868L23.4511 12.8599C23.445 12.1534 23.3122 10.4053 20.3889 10.4053ZM20.7391 14.6976C21.0694 14.6976 21.3375 14.9734 21.3375 15.3133C21.3375 15.6532 21.0694 15.929 20.7391 15.929H14.8999C14.5696 15.929 14.3015 15.6532 14.3015 15.3133C14.3015 14.9734 14.5696 14.6976 14.8999 14.6976H20.7391Z" fill="#CBCBCB"/>
+                                    </svg>
+                                </div>
+                                <button className="apply">
+                                    Apply
+                                </button>
+                            </div>
+                        </div>
+                        {/* End of Job listing */}
                     </div>
                     <p>Do you want to post a job for your company? We can help. <a href="#">Click here</a></p>
                 </div>
                 {/* End of Job Listings Div */}
                 {/* Start of Testimonials Div */}
-                <div className="testimonials">
+                <div className="testimonials wrapper">
                     <h2>Trusted by leading startups.</h2>
                     {/* Arrows */}
                     <div className="testimonialCard">
@@ -201,7 +258,7 @@ export default function Home(){
                 </div>
                 {/* End of Testimonials Div */}
                 {/* Q&A Div */}
-                <div className="questionsAndAnswers">
+                <div className="questionsAndAnswers wrapper">
                     <h2>Questions & Answers</h2>
                     <div className="qAndAContainer">
                         <p className="question">

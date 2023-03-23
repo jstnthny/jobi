@@ -228,6 +228,11 @@ template {
   font-weight: 400;
   src: url("./assets/fonts/gordita-regular.woff") format("woff");
 }
+@font-face {
+  font-family: "Gordita";
+  font-weight: 300;
+  src: url("./assets/fonts/gordita-light.woff") format("woff");
+}
 .wrapper {
   max-width: 1600px;
   width: 90%;
@@ -423,6 +428,95 @@ nav ul .register {
   justify-content: space-evenly;
   margin-top: 40px;
 }
+.features h3 {
+  font-family: "Gordita";
+  font-size: 3.25rem;
+}
+.features p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.jobListings {
+  margin-top: 100px;
+}
+.jobListings .jobListingsTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.jobListings .jobListingsTitleContainer a {
+  color: #00BF58;
+  font-family: "Gordita";
+  text-decoration: none;
+  border-bottom: 1px solid #00BF58;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.19rem;
+}
+.jobListings h2 {
+  font-family: "EB Garamond", serif;
+  font-size: 4.5rem;
+}
+
+.listings {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.jobListing {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 0;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+}
+.jobListing .positionAndLogo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+}
+.jobListing .jobDate {
+  width: 200px;
+}
+.jobListing .jobButtons {
+  display: flex;
+  gap: 10px;
+}
+.jobListing .jobLocation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+}
+.jobListing .jobLocation P:first-of-type {
+  font-weight: 300;
+}
+.jobListing .jobLocation P:last-of-type {
+  font-weight: bold;
+}
+.jobListing .jobButtons {
+  display: flex;
+  align-items: center;
+}
+.jobListing .jobButtons button {
+  background-color: #00BF58;
+  color: white;
+  border: 1px solid #00BF58;
+  border-radius: 17px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+}
+.jobListing .jobButtons .bookmark {
+  align-self: center;
+  cursor: pointer;
+}
 
 h1, h2, h3, h4, h5, p, button {
   line-height: 1.2;
@@ -446,4 +540,22 @@ h1 span {
   font-family: "EB Garamond", serif;
   font-size: 1.25rem;
   margin: 20px 0 40px;
+}
+
+.positionAndLogo > h4 {
+  font-family: "Gordita";
+  font-size: 1.25rem;
+  max-width: 400px;
+}
+
+.jobDate .employmentType {
+  color: #00BF58;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.jobDate p {
+  font-weight: 100;
+}
+.jobDate span {
+  font-weight: bold;
 }/*# sourceMappingURL=App.css.map */
