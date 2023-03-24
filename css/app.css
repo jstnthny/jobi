@@ -595,6 +595,24 @@ nav ul .register {
   padding: 10px 20px;
 }
 
+.questionsAndAnswers {
+  margin-top: 100px;
+}
+
+.qAndAHelp {
+  border: 1px solid #00BF58;
+  border-radius: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 40px auto;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 20px;
+}
+.qAndAHelp a {
+  color: #00BF58;
+}
+
 h1, h2, h3, h4, h5, p, button {
   line-height: 1.2;
   letter-spacing: 1.2px;
@@ -637,6 +655,13 @@ h1 span {
   font-weight: bold;
 }
 
+.questionsAndAnswers > h2 {
+  font-family: "EB Garamond", serif;
+  font-size: 4.7rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
 .accordionParent {
   border-radius: 3px;
   background-color: white;
@@ -647,6 +672,7 @@ h1 span {
   display: flex;
   flex-direction: column;
   margin: 15px 0;
+  border-bottom: 1px solid #aaa;
 }
 .accordion h4 {
   font-family: "Gordita";
@@ -681,16 +707,20 @@ h1 span {
   font-weight: 600;
 }
 
-.accordion .contentParent {
+.accordion .contentParent, .answerParent {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.15s ease-out;
   color: black;
-  border-bottom: 1px solid #aaa;
 }
 
 .accordion.toggled .contentParent {
   max-height: 500px;
+  transition: max-height 0.25s ease-in;
+}
+
+.accordion.toggled .answerParent {
+  max-height: 600px;
   transition: max-height 0.25s ease-in;
 }
 
@@ -701,4 +731,21 @@ h1 span {
   line-height: 32px;
   font-weight: 400;
   font-size: 1.13rem;
+}
+
+.qAndAContainer {
+  background-color: #F0F6F4;
+  padding: 10px;
+  border-radius: 30px;
+  margin-bottom: 0.5rem;
+}
+.qAndAContainer .accordion {
+  border-bottom: 1px solid #d1d6d4;
+}
+.qAndAContainer .accordion:last-of-type {
+  border: none;
+}
+
+.question {
+  padding-bottom: 20px;
 }/*# sourceMappingURL=App.css.map */

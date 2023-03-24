@@ -376,3 +376,22 @@ nav{
         }
     }
 }
+
+// Q&A Container
+
+.questionsAndAnswers{
+    margin-top: 100px;
+}
+
+.qAndAHelp{
+    border: 1px solid variables.$logoGreen;
+    border-radius: 30px;
+    width: fit-content;
+    margin: 40px auto;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 20px;
+    a{
+        color: variables.$logoGreen;
+    }
+}

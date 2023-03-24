@@ -6,10 +6,12 @@
     margin-bottom: 4rem;
 }
 
+
 .accordion{
     display: flex;
     flex-direction: column;
     margin: 15px 0;
+    border-bottom: 1px solid #aaa;
     h4{
         font-family: variables.$gordita;
         font-size: 1.5rem;
@@ -45,16 +47,21 @@
     font-weight: 600;
 }
 
-.accordion .contentParent{
+.accordion .contentParent,.answerParent{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.15s ease-out;
     color: black;
-    border-bottom: 1px solid #aaa;
+    
 }
 
 .accordion.toggled .contentParent{
     max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}
+
+.accordion.toggled .answerParent{
+    max-height: 600px;
     transition: max-height 0.25s ease-in;
 }
 
@@ -67,4 +74,23 @@
             font-size: 1.13rem;
         }
     }
+}
+
+
+.qAndAContainer{
+    background-color: #F0F6F4;
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 0.5rem;
+    .accordion{
+        border-bottom: 1px solid #d1d6d4;
+    }
+    .accordion:last-of-type{
+        border: none;
+    }
+}
+
+
+.question{
+    padding-bottom: 20px;
 }

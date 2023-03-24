@@ -1,36 +1,15 @@
 import Header from "./Header.jsx"
 import Footer from "./Footer.jsx"
 import Accordion from "./Accordion.jsx"
+import QAndA from "./QAndA.jsx"
 import lookingForExpertData from "./LookingForExpertData.jsx"
+import qAndAData from "./QAndA.jsx"
 import photo from "../assets/images/guySittingDownOnDesk.jpeg"
 import mondayLogo from "../assets/images/mondayLogo.png"
 import testimonialsPlaceholder from "../assets/images/testimonialsPlaceholder.png"
+import QAndAData from "./QAndAData.jsx"
 
 export default function Home(){
-
-    // const lookingForExpertData = [
-    //     {
-    //         id: 0,
-    //         label: "Seamless Search",
-    //         renderContent: () => (
-    //             <p>
-    //                It only takes 5 minutes. Set-up is smooth and simple, with fully
-    //                customisable page design to reflect your brand.
-    //             </p>
-    //         ),
-    //     },
-    //     {
-    //     id: 1,
-    //     label: "Hire top talents",
-    //     renderContent: () => (
-    //         <p>
-    //                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quasi saepe nam qui 
-    //                ad temporibus sed libero voluptates laborum rerum?
-    //             </p>
-    //         ),
-    //     },
-            
-    // ]
 
     return(
         <div>
@@ -281,7 +260,7 @@ export default function Home(){
                         <div className="tcsmRight">
                             <p>Looking for an expert?</p>
                             <h2>Find top talents from jobi.</h2>
-                            <Accordion items={lookingForExpertData} keepOthersOpen={true} />
+                            <Accordion items={lookingForExpertData} keepOthersOpen={false} />
                             <a href="#">Find Talents</a>
                         </div>
                     </div>
@@ -291,14 +270,9 @@ export default function Home(){
                 <div className="questionsAndAnswers wrapper">
                     <h2>Questions & Answers</h2>
                     <div className="qAndAContainer">
-                        <p className="question">
-                            How does the free trial work?
-                        </p>
-                        <p className="answer">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-                        </p>
+                     <QAndA items={QAndAData}/>
                     </div>
-                    <p>Can't find the answer? We can help. <a href="#">Click here</a></p>
+                    <p className="qAndAHelp">Can't find the answer? We can help. <a href="#">Click here</a></p>
                     <div>
                         <div>
                             <p>Most complete job portal.</p>
