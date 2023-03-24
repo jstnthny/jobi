@@ -358,7 +358,21 @@ nav{
         font-size: 4.7rem;
         width: 100%;
     }
-    div{
-        width: 50%;
+    .tcsmLeft{
+       width: 60%;
+    }
+
+    .tcsmRight{
+        width: 40%;
+        a{
+            border: 2px solid variables.$logoGreen;
+            border-radius: 6px;
+            color: variables.$logoGreen;
+            text-decoration: none;
+            font-family: variables.$gordita;
+            font-weight: bold;
+            font-size: 1.13rem;
+            padding: 10px 20px;
+        }
     }
 }

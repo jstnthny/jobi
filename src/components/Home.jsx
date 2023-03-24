@@ -1,33 +1,36 @@
 import Header from "./Header.jsx"
 import Footer from "./Footer.jsx"
 import Accordion from "./Accordion.jsx"
+import lookingForExpertData from "./LookingForExpertData.jsx"
 import photo from "../assets/images/guySittingDownOnDesk.jpeg"
 import mondayLogo from "../assets/images/mondayLogo.png"
 import testimonialsPlaceholder from "../assets/images/testimonialsPlaceholder.png"
 
 export default function Home(){
 
-    const data = [
-        {
-            id: 0,
-            label: "test",
-            renderContent: () => (
-                <p>
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quasi saepe nam qui 
-                   ad temporibus sed libero voluptates laborum rerum?
-                </p>
-            ),
-            id: 1,
-            label: "test",
-            renderContent: () => (
-                <p>
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quasi saepe nam qui 
-                   ad temporibus sed libero voluptates laborum rerum?
-                </p>
-            ),
-
-        }
-    ]
+    // const lookingForExpertData = [
+    //     {
+    //         id: 0,
+    //         label: "Seamless Search",
+    //         renderContent: () => (
+    //             <p>
+    //                It only takes 5 minutes. Set-up is smooth and simple, with fully
+    //                customisable page design to reflect your brand.
+    //             </p>
+    //         ),
+    //     },
+    //     {
+    //     id: 1,
+    //     label: "Hire top talents",
+    //     renderContent: () => (
+    //         <p>
+    //                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quasi saepe nam qui 
+    //                ad temporibus sed libero voluptates laborum rerum?
+    //             </p>
+    //         ),
+    //     },
+            
+    // ]
 
     return(
         <div>
@@ -272,13 +275,13 @@ export default function Home(){
 
                     </div>
                     <div className="testimonialClientSearchContainer">
-                        <div>
+                        <div className="tcsmLeft">
                             <img src={testimonialsPlaceholder} alt="Placeholder image" />
                         </div>
-                        <div>
+                        <div className="tcsmRight">
                             <p>Looking for an expert?</p>
                             <h2>Find top talents from jobi.</h2>
-                            <Accordion items={data} keepOthersOpen={true} />
+                            <Accordion items={lookingForExpertData} keepOthersOpen={true} />
                             <a href="#">Find Talents</a>
                         </div>
                     </div>

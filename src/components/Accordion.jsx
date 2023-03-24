@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
-import "./Accordion.css"
+import upArrow from "../assets/images/upArrow.svg";
+import downArrow from "../assets/images/downArrow.svg";
+// import "./Accordion.css"
 
 const Accordion = ({items, keepOthersOpen}) => {
 
@@ -40,9 +42,9 @@ const Accordion = ({items, keepOthersOpen}) => {
                 return (
                     <div className={`accordion ${listItem.toggled ? 'toggled' : ''}`}key={key}>
                         <button className="toggle" onClick={() => handleAccordionToggle(listItem)}>
-                            <p>{listItem.label}</p>
+                            <h4>{listItem.label}</h4>
                             <div className="directionIndicator">
-                                {listItem.toggled ? '-' : '+'}
+                                {listItem.toggled ? <img src={upArrow} /> : <img src={downArrow} />}
                             </div>
                         </button>
                         <div className="contentParent">

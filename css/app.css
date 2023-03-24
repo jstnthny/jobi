@@ -578,8 +578,21 @@ nav ul .register {
   font-size: 4.7rem;
   width: 100%;
 }
-.testimonialClientSearchContainer div {
-  width: 50%;
+.testimonialClientSearchContainer .tcsmLeft {
+  width: 60%;
+}
+.testimonialClientSearchContainer .tcsmRight {
+  width: 40%;
+}
+.testimonialClientSearchContainer .tcsmRight a {
+  border: 2px solid #00BF58;
+  border-radius: 6px;
+  color: #00BF58;
+  text-decoration: none;
+  font-family: "Gordita";
+  font-weight: bold;
+  font-size: 1.13rem;
+  padding: 10px 20px;
 }
 
 h1, h2, h3, h4, h5, p, button {
@@ -622,4 +635,70 @@ h1 span {
 }
 .jobDate span {
   font-weight: bold;
+}
+
+.accordionParent {
+  border-radius: 3px;
+  background-color: white;
+  margin-bottom: 4rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.accordion h4 {
+  font-family: "Gordita";
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.accordion .toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  padding: 10px 15px;
+  fill: black;
+  color: black;
+  transition: color 0.15s ease, fill 0.15 ease;
+  font-weight: 600;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.accordion:first-child .toggle {
+  border-bottom: 0;
+}
+
+.accordion .toggle .directionIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  font-weight: 600;
+}
+
+.accordion .contentParent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.15s ease-out;
+  color: black;
+  border-bottom: 1px solid #aaa;
+}
+
+.accordion.toggled .contentParent {
+  max-height: 500px;
+  transition: max-height 0.25s ease-in;
+}
+
+.accordion .content {
+  padding: 2px 15px 30px 15px;
+}
+.accordion .content p {
+  line-height: 32px;
+  font-weight: 400;
+  font-size: 1.13rem;
 }/*# sourceMappingURL=App.css.map */
