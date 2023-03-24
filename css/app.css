@@ -440,6 +440,21 @@ nav ul .register {
 .jobListings {
   margin-top: 100px;
 }
+.jobListings P:nth-child(3) {
+  width: 705px;
+  margin: 50px auto;
+  border: 1px solid #F0F6F4;
+  border-radius: 30px;
+  background-color: #F0F6F4;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.jobListings P:nth-child(3) span {
+  color: #00BF58;
+}
+.jobListings P:nth-child(3) span a {
+  color: #00BF58;
+}
 .jobListings .jobListingsTitleContainer {
   display: flex;
   align-items: center;
@@ -516,6 +531,55 @@ nav ul .register {
 .jobListing .jobButtons .bookmark {
   align-self: center;
   cursor: pointer;
+}
+
+.testimonials {
+  margin-top: 80px;
+}
+.testimonials h2 {
+  font-size: 4.5rem;
+  width: 55%;
+  margin-bottom: 40px;
+}
+
+.testimonialCardContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.testimonialCard, .testimonialCardAlt {
+  color: white;
+  width: 770px;
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.testimonialCard {
+  background-color: #00BF58;
+}
+
+.testimonialCardAlt {
+  background-color: #755146;
+}
+
+.testimonialClientSearchContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.testimonialClientSearchContainer p:first-of-type {
+  font-weight: 300;
+}
+.testimonialClientSearchContainer h2 {
+  font-family: "EB Garamond", serif;
+  font-size: 4.7rem;
+  width: 100%;
+}
+.testimonialClientSearchContainer div {
+  width: 50%;
 }
 
 h1, h2, h3, h4, h5, p, button {
