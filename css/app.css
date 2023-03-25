@@ -613,6 +613,46 @@ nav ul .register {
   color: #00BF58;
 }
 
+.lookingForJobAd {
+  display: flex;
+  justify-content: space-between;
+}
+.lookingForJobAd div {
+  width: 40%;
+}
+.lookingForJobAd div:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.lookingForJobAd h4 {
+  font-family: "EB Garamond", serif;
+  font-size: 3.4rem;
+}
+.lookingForJobAd p {
+  font-weight: 300;
+  margin-top: 10px;
+  font-size: 1.25rem;
+}
+.lookingForJobAd button {
+  border: 2px solid #00BF58;
+  font-family: "Gordita";
+  border-radius: 5px;
+  padding: 15px 10px;
+  font-weight: bold;
+  margin: 10px;
+}
+.lookingForJobAd button:first-of-type {
+  color: #00BF58;
+  background-color: white;
+  width: 190px;
+}
+.lookingForJobAd button:last-of-type {
+  background-color: #00BF58;
+  color: white;
+  width: 155px;
+}
+
 h1, h2, h3, h4, h5, p, button {
   line-height: 1.2;
   letter-spacing: 1.2px;

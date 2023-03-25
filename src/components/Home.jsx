@@ -273,13 +273,13 @@ export default function Home(){
                      <QAndA items={QAndAData}/>
                     </div>
                     <p className="qAndAHelp">Can't find the answer? We can help. <a href="#">Click here</a></p>
-                    <div>
+                    <div className="lookingForJobAd">
                         <div>
-                            <p>Most complete job portal.</p>
+                            <h4>Most complete job portal.</h4>
                             <p>Signup and start find your job or talents.</p>
                         </div>
                         <div>
-                            <button>Looking for a job?</button>
+                            <button className="lfj">Looking for a job?</button>
                             <button>Post a job</button>
                         </div>
                     </div>
