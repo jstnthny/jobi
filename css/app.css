@@ -597,6 +597,7 @@ nav ul .register {
 
 .questionsAndAnswers {
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .qAndAHelp {
@@ -641,6 +642,7 @@ nav ul .register {
   padding: 15px 10px;
   font-weight: bold;
   margin: 10px;
+  cursor: pointer;
 }
 .lookingForJobAd button:first-of-type {
   color: #00BF58;
@@ -788,4 +790,46 @@ h1 span {
 
 .question {
   padding-bottom: 20px;
+}
+
+.topFooter {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.topFooter .footerSocialsContainer {
+  display: flex;
+  width: 130px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.topFooter ul {
+  list-style: none;
+  font-family: "Gordita";
+}
+
+.footerLeft {
+  width: 20%;
+}
+
+.footerRight {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.footerRight h5 {
+  font-family: "Gordita";
+  font-size: 1.5rem;
+}
+.footerRight ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footerRight li {
+  font-weight: 300;
+}
+.footerRight li a {
+  text-decoration: none;
+  color: black;
 }/*# sourceMappingURL=App.css.map */

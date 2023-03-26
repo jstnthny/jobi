@@ -381,6 +381,7 @@ nav{
 
 .questionsAndAnswers{
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .qAndAHelp{
@@ -425,6 +426,7 @@ nav{
             padding: 15px 10px;
             font-weight: bold;
             margin: 10px;
+            cursor: pointer;
         }
         button:first-of-type{
             color: variables.$logoGreen;
