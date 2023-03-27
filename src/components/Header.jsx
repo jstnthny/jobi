@@ -1,6 +1,9 @@
 import {Link, Route, Routes} from "react-router-dom"
 
-export default function Header(){
+
+
+const Header = () => {
+
     return(
         <header>
             <nav>
@@ -28,3 +31,5 @@ export default function Header(){
         </header>
     )
 }
+
+export default Header;
