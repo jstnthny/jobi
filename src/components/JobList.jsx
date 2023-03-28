@@ -125,8 +125,7 @@ export default function JobList(){
 
                             {/* ACCORDION MENU */}
             
-                <div className="accordion">
-                    {console.log(isOpen)}
+                <div className={`accordion ${isOpen ? 'toggled' : ''}`}>
                     <button className="toggle" onClick={toggleAccordion}>
                         <h2>Filter By</h2>
                          <div className="directionIndicator">
@@ -155,7 +154,7 @@ export default function JobList(){
                     value={keywordFilter}
                     onChange={e => setKeywordFilter(e.target.value)}
                 /> */}
-                <p className="jobTotal">All <span>{jobData.length}</span> jobs found</p>
+                <p className="jobTotal">All <span>{filteredJobsData.length}</span> jobs found</p>
                 {filteredJobsData.map((job, index) => (
                     <div className="jobListing" key={index}>
                         <div className="positionAndLogo">

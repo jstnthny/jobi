@@ -26,3 +26,11 @@
         font-weight: bold;
     }
 }
+
+input{
+        padding: 10px 10px;
+        font-family: variables.$gordita;
+        font-size: 0.8rem;
+        border-radius: 10px;
+        border: 1px solid lightgrey;
+}
