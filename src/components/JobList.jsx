@@ -1,87 +1,29 @@
 import React, {useState} from 'react';
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
+import JobData from "./JobData.jsx";
+import SalarySlider from "./SalarySlider.jsx";
 import upArrow from "../assets/images/upArrow.svg";
 import downArrow from "../assets/images/downArrow.svg";
 
 
-const jobListHeaderStyles ={
-    backgroundColor: 'orange'
-};
-
-
-const jobData = [
-    {
-        jobPosition: 'Software Developer',
-        salary: 100000,
-        location: 'San Francisco, CA',
-        datePosted: '2023-03-27',
-        employmentType: 'Full-time',
-        keywords: ['software development', 'programming', 'web development']
-    },
-    {
-        jobPosition: 'Marketing Manager',
-        salary: 80000,
-        location: 'New York City, NY',
-        datePosted: '2023-03-25',
-        employmentType: 'Full-time',
-        keywords: ['marketing', 'digital marketing', 'social media']
-    },
-    {
-        jobPosition: 'Accountant',
-        salary: 65000,
-        location: 'Chicago, IL',
-        datePosted: '2023-03-22',
-        employmentType: 'Full-time',
-        keywords: ['accounting', 'bookkeeping', 'finance']
-    },
-    {
-    jobPosition: 'Graphic Designer',
-    salary: 60000,
-    location: 'Los Angeles, CA',
-    datePosted: '2023-03-28',
-    employmentType: 'Full-time',
-    keywords: ['graphic design', 'print design', 'Adobe Creative Suite']
-    },
-    {
-    jobPosition: 'Customer Service Representative',
-    salary: 40000,
-    location: 'Dallas, TX',
-    datePosted: '2023-03-29',
-    employmentType: 'Full-time',
-    keywords: ['customer service', 'phone support', 'problem-solving']
-    },
-    {
-    jobPosition: 'Data Analyst',
-    salary: 75000,
-    location: 'Boston, MA',
-    datePosted: '2023-03-30',
-    employmentType: 'Full-time',
-    keywords: ['data analysis', 'SQL', 'Excel']
-    },
-    {
-    jobPosition: 'Event Coordinator',
-    salary: 25000,
-    location: 'Toronto, ON',
-    datePosted: '2023-04-03',
-    employmentType: 'Part-time',
-    keywords: ['event planning', 'project management', 'communication']
-    },
-    {
-    jobPosition: 'Administrative Assistant',
-    salary: 18000,
-    location: 'Toronto, ON',
-    datePosted: '2023-04-04',
-    employmentType: 'Part-time',
-    keywords: ['administrative', 'office management', 'Microsoft Office']
-    }
-];
-
+let jobData = JobData;
 
 
 
 export default function JobList(){
     const [isOpen, setIsOpen] = useState(false);
+    const [minSalary, setMinSalary] = useState(0);
+    const [maxSalary, setMaxSalary] = useState(1000000);
+
+    const handleMinSalaryChange = (event) => {
+        setMinSalary(event.target.value);
+    };
+
+    const handleMaxSalaryChange = (event) => {
+        setMaxSalary(event.target.value);
+    };
+
 
     const toggleAccordion = () => {
         setIsOpen(!isOpen);
@@ -89,14 +31,17 @@ export default function JobList(){
 
     const [keywordFilter, setKeywordFilter] = useState("");
     const filteredJobsData = jobData.filter(job => {
-        return job.keywords.some(keyword => {
+        return( 
+            job.salary >= minSalary && maxSalary <= maxSalary &&
+            job.keywords.some(keyword => {
             return keyword.toLowerCase().includes(keywordFilter.toLowerCase());
-        })
+        }))
     })
 
     return(
 
         <div className="jobList">
+
             <Header backgroundColor="#244034" color="white" aColor="white"/>
             <div className="searchMenubg">
                 <div className="searchMenu">
@@ -143,6 +88,15 @@ export default function JobList(){
                                     value={keywordFilter}
                                     onChange={(e) => setKeywordFilter(e.target.value)}
                                 />
+                                <label htmlFor="salarySlider">Salary Slider</label>
+                                 <div>
+                                <label>Minimum Salary:</label>
+                                <input type="range" value={minSalary} onChange={handleMinSalaryChange} />
+                                </div>
+                                <div>
+                                <label>Maximum Salary:</label>
+                                <input type="range" value={maxSalary} onChange={handleMaxSalaryChange} />
+      </div>
                             </div>
                         </div>
                     )}
@@ -170,7 +124,6 @@ export default function JobList(){
                         <div className="jobLocation">
                             <p>{job.location}</p>
                             <p>{Array.isArray(job.keywords) ? job.keywords.join(', ') : job.keywords}</p>
-                            {console.log(job)}
                         </div>
                     </div>
                 ))}
