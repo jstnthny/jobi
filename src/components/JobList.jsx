@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import upArrow from "../assets/images/upArrow.svg";
+import downArrow from "../assets/images/downArrow.svg";
 
 
 const jobData = [
@@ -118,22 +119,28 @@ export default function JobList(){
 
                             {/* ACCORDION MENU */}
             
-            <div className="accordion-menu">
-                <div className="accordion-header" onClick={toggleAccordion}>
-                    <h2>yo</h2>
-                    <span className={isOpen ?  <img src={upArrow} /> :  <img src={upArrow} />} />
-                </div>
-                {isOpen && (
-                    <div className="accordion-content">
-                        <h3>Filter by keyword</h3>
-                    <input
-                        type="text"
-                        placeholder="Filter by keyword"
-                        value={keywordFilter}
-                        onChange={(e) => setKeywordFilter(e.target.value)}
-                    />
-                    </div>
-                )}
+                <div className="accordion">
+                    {console.log(isOpen)}
+                    <button className="toggle" onClick={toggleAccordion}>
+                        <h2>Filter By</h2>
+                         <div className="directionIndicator">
+                                {isOpen ? <img src={upArrow} /> : <img src={downArrow} />}
+                            </div>
+                    </button>
+                    {isOpen && (
+                        <div className="accordionContent">
+                            <div className="jobFilterKeyword">
+                                <label htmlFor="jobKeyword">Keyword Or Title</label>
+                                <input
+                                    id="jobKeyord"
+                                    type="text"
+                                    placeholder="Filter by keyword or Title"
+                                    value={keywordFilter}
+                                    onChange={(e) => setKeywordFilter(e.target.value)}
+                                />
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* <input
@@ -142,6 +149,7 @@ export default function JobList(){
                     value={keywordFilter}
                     onChange={e => setKeywordFilter(e.target.value)}
                 /> */}
+    
                 {filteredJobsData.map((job, index) => (
                     <div className="jobListing" key={index}>
                         <div className="positionAndLogo">

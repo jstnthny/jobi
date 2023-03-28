@@ -94,3 +94,28 @@
 .question{
     padding-bottom: 20px;
 }
+
+// Filter Accordion - JOB LISTINGS PAGE
+
+.listings{
+    .accordion{
+        background-color: #F0F6F4;
+        border-radius: 20px;
+        display: flex;
+        border: none;
+        padding: 20px;
+        font-family: variables.$gordita;
+    }
+    .accordionContent{
+        padding:10px 15px;
+    }   
+}
+
+.jobFilterKeyword{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    input{
+        width: 200px;
+    }
+}
