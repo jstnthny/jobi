@@ -1,0 +1,12 @@
+@use "./variables";
+
+.jobList{
+    .listings{
+        border: none;
+    }
+    .jobListing{
+        border: 1px lightgrey solid;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+}

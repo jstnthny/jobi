@@ -1,47 +1,98 @@
+import React, {useState} from 'react';
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
+import upArrow from "../assets/images/upArrow.svg";
+
 
 const jobData = [
     {
-     jobPosition: 'Web Developer',
-     employmentType: 'Full-time',
-     datePosted: 'July 18, 2018',
-     location: 'Spain, Barcelona',
-     keywords: ['developer, coder']
-    }
-    ,
-  {
-    jobPosition: 'Sales Associate',
-    jobPayPerHour: 15.50,
-    location: 'New York City, NY',
-    datePosted: '2023-03-15',
-    employmentType: 'Full-time',
-    keywords: ['sales', 'customer service', 'retail']
-  },
-  {
-    jobPosition: 'Customer Service Representative',
-    jobPayPerHour: 14.25,
+        jobPosition: 'Software Developer',
+        salary: 100000,
+        location: 'San Francisco, CA',
+        datePosted: '2023-03-27',
+        employmentType: 'Full-time',
+        keywords: ['software development', 'programming', 'web development']
+    },
+    {
+        jobPosition: 'Marketing Manager',
+        salary: 80000,
+        location: 'New York City, NY',
+        datePosted: '2023-03-25',
+        employmentType: 'Full-time',
+        keywords: ['marketing', 'digital marketing', 'social media']
+    },
+    {
+        jobPosition: 'Accountant',
+        salary: 65000,
+        location: 'Chicago, IL',
+        datePosted: '2023-03-22',
+        employmentType: 'Full-time',
+        keywords: ['accounting', 'bookkeeping', 'finance']
+    },
+    {
+    jobPosition: 'Graphic Designer',
+    salary: 60000,
     location: 'Los Angeles, CA',
-    datePosted: '2023-03-20',
-    employmentType: 'Part-time',
-    keywords: ['customer service', 'call center']
-  },
-  {
-    jobPosition: 'Software Developer',
-    jobPayPerHour: 30.00,
-    location: 'Seattle, WA',
-    datePosted: '2023-03-18',
+    datePosted: '2023-03-28',
     employmentType: 'Full-time',
-    keywords: ['software development', 'programming', 'web development']
-  },
+    keywords: ['graphic design', 'print design', 'Adobe Creative Suite']
+    },
+    {
+    jobPosition: 'Customer Service Representative',
+    salary: 40000,
+    location: 'Dallas, TX',
+    datePosted: '2023-03-29',
+    employmentType: 'Full-time',
+    keywords: ['customer service', 'phone support', 'problem-solving']
+    },
+    {
+    jobPosition: 'Data Analyst',
+    salary: 75000,
+    location: 'Boston, MA',
+    datePosted: '2023-03-30',
+    employmentType: 'Full-time',
+    keywords: ['data analysis', 'SQL', 'Excel']
+    },
+    {
+    jobPosition: 'Event Coordinator',
+    salary: 25000,
+    location: 'Toronto, ON',
+    datePosted: '2023-04-03',
+    employmentType: 'Part-time',
+    keywords: ['event planning', 'project management', 'communication']
+    },
+    {
+    jobPosition: 'Administrative Assistant',
+    salary: 18000,
+    location: 'Toronto, ON',
+    datePosted: '2023-04-04',
+    employmentType: 'Part-time',
+    keywords: ['administrative', 'office management', 'Microsoft Office']
+    }
 ];
 
 
 
+
+
 export default function JobList(){
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleAccordion = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const [keywordFilter, setKeywordFilter] = useState("");
+    const filteredJobsData = jobData.filter(job => {
+        return job.keywords.some(keyword => {
+            return keyword.toLowerCase().includes(keywordFilter.toLowerCase());
+        })
+    })
+
     return(
-        <div>
-            <Header backgroundColor="orange"/>
+
+        <div className="jobList">
+            <Header/>
             <div className="searchMenu wrapper">
                 <div>
                     <label htmlFor="keywordsTitle">Keywords or Title</label>
@@ -57,8 +108,41 @@ export default function JobList(){
                     Search
                 </button>
             </div>
-            <div>
-                {jobData.map((job, index) => (
+
+             
+
+            {/* Job Listings */}
+
+
+            <div className="listings wrapper">
+
+                            {/* ACCORDION MENU */}
+            
+            <div className="accordion-menu">
+                <div className="accordion-header" onClick={toggleAccordion}>
+                    <h2>yo</h2>
+                    <span className={isOpen ?  <img src={upArrow} /> :  <img src={upArrow} />} />
+                </div>
+                {isOpen && (
+                    <div className="accordion-content">
+                        <h3>Filter by keyword</h3>
+                    <input
+                        type="text"
+                        placeholder="Filter by keyword"
+                        value={keywordFilter}
+                        onChange={(e) => setKeywordFilter(e.target.value)}
+                    />
+                    </div>
+                )}
+                </div>
+
+                {/* <input
+                    type="text"
+                    placeholder="Filter by keyword"
+                    value={keywordFilter}
+                    onChange={e => setKeywordFilter(e.target.value)}
+                /> */}
+                {filteredJobsData.map((job, index) => (
                     <div className="jobListing" key={index}>
                         <div className="positionAndLogo">
                             <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +152,7 @@ export default function JobList(){
                         </div>
                         <div className="jobDate">
                             <p className="employmentType">{job.employmentType}</p>
-                            <p>{job.datePosted}</p>
+                            <p>{job.salary.toLocaleString("en-US", {style: "currency", currency: "CAD"})}/year</p>
                         </div>
                         <div className="jobLocation">
                             <p>{job.location}</p>
