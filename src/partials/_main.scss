@@ -11,7 +11,6 @@
 nav{
     display: flex;
     justify-content: space-around;
-    background-color: variables.$headerBg;
     padding: 40px 0;
     align-items: center;
     ul{
@@ -22,7 +21,7 @@ nav{
         font-weight: bold;
         a{
             text-decoration: none;
-            color: variables.$black;
+            // color: variables.$black;
         }
 
         .login, .register{

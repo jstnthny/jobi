@@ -2,10 +2,24 @@ import {Link, Route, Routes} from "react-router-dom"
 
 
 
-const Header = () => {
+const Header = (props) => {
+
+    const {backgroundColor, color, aColor} = props;
+
+
+
+    const styles ={
+        header:{
+            backgroundColor,
+            color,
+        },
+        a:{
+            color: aColor,
+        },
+    }
 
     return(
-        <header>
+        <header style={styles.header}>
             <nav>
                 <div>
                     <svg width="119" height="42" viewBox="0 0 119 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,11 +30,11 @@ const Header = () => {
                 </div>
                 
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/JobList">Job</Link></li>
-                    <li><Link to="#">Explore</Link></li>
-                    <li><Link to="#">Category</Link></li>
-                    <li><Link to="#">Pages</Link></li>
+                    <li><Link to="/" style={styles.a}>Home</Link></li>
+                    <li><Link to="/JobList" style={styles.a}>Job</Link></li>
+                    <li><Link to="#" style={styles.a}>Explore</Link></li>
+                    <li><Link to="#" style={styles.a}>Category</Link></li>
+                    <li><Link to="#" style={styles.a}>Pages</Link></li>
                 </ul>
 
                 <ul>

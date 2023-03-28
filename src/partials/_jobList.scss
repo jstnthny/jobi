@@ -9,4 +9,20 @@
         margin: 20px 0;
         border-radius: 10px;
     }
+
+    .searchMenubg{
+        background-color: variables.$darkGreen;
+        padding-bottom: 100px;
+        width: 100%;
+    }
+
+
+}
+
+.jobTotal{
+    font-family: variables.$gordita;
+    font-weight: 300;
+    span{
+        font-weight: bold;
+    }
 }

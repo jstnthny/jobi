@@ -5,6 +5,11 @@ import upArrow from "../assets/images/upArrow.svg";
 import downArrow from "../assets/images/downArrow.svg";
 
 
+const jobListHeaderStyles ={
+    backgroundColor: 'orange'
+};
+
+
 const jobData = [
     {
         jobPosition: 'Software Developer',
@@ -75,7 +80,6 @@ const jobData = [
 
 
 
-
 export default function JobList(){
     const [isOpen, setIsOpen] = useState(false);
 
@@ -93,21 +97,23 @@ export default function JobList(){
     return(
 
         <div className="jobList">
-            <Header/>
-            <div className="searchMenu wrapper">
-                <div>
-                    <label htmlFor="keywordsTitle">Keywords or Title</label>
-                    <input type="text" placeholder="Design, branding" />
+            <Header backgroundColor="#244034" color="white" aColor="white"/>
+            <div className="searchMenubg">
+                <div className="searchMenu">
+                        <div>
+                            <label htmlFor="keywordsTitle">What are you looking for?</label>
+                            <input type="text" placeholder="Design, branding" />
+                        </div>
+                        <div>
+                            <label htmlFor="jobCategories">Category</label>
+                            <select name="jobCategories" id="">
+                                    <option value="">Designer</option>
+                            </select>
+                        </div>
+                        <button>
+                            Search
+                        </button>
                 </div>
-                <div>
-                    <label htmlFor="jobCategories">Category</label>
-                    <select name="jobCategories" id="">
-                            <option value="">Designer</option>
-                    </select>
-                </div>
-                <button>
-                    Search
-                </button>
             </div>
 
              
@@ -149,7 +155,7 @@ export default function JobList(){
                     value={keywordFilter}
                     onChange={e => setKeywordFilter(e.target.value)}
                 /> */}
-    
+                <p className="jobTotal">All <span>{jobData.length}</span> jobs found</p>
                 {filteredJobsData.map((job, index) => (
                     <div className="jobListing" key={index}>
                         <div className="positionAndLogo">

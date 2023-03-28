@@ -13,7 +13,7 @@ export default function Home(){
 
     return(
         <div>
-            <Header />
+            <Header backgroundColor="#E9EAEC" aColor="black" color="black"/>
             <div className="homepage">
                 <div className="homePageHeader">
                     <h1>Find your job without <span>any hassle.</span></h1>
