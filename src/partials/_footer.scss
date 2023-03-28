@@ -67,3 +67,47 @@
         gap: 30px;
     }
 }
+
+.lookingForJobAd{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    div{
+        width: 40%;
+    }
+
+    div:last-of-type{
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+
+    h4{
+        font-family: variables.$garmond;
+        font-size: 3.4rem;
+    }
+    p{
+        font-weight: 300;
+        margin-top: 10px;
+        font-size: 1.25rem;
+    }
+        button{
+            border: 2px solid variables.$logoGreen;
+            font-family: variables.$gordita;
+            border-radius: 5px;
+            padding: 15px 10px;
+            font-weight: bold;
+            margin: 10px;
+            cursor: pointer;
+        }
+        button:first-of-type{
+            color: variables.$logoGreen;
+            background-color: white;
+            width: 190px;
+        }
+        button:last-of-type{
+            background-color: variables.$logoGreen;
+            color: white;
+            width: 155px;
+        }
+}

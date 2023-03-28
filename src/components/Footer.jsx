@@ -1,6 +1,16 @@
 export default function Footer(){
     return(
         <footer className="wrapper">
+            <div className="lookingForJobAd">
+                <div>
+                    <h4>Most complete job portal.</h4>
+                    <p>Signup and start find your job or talents.</p>
+                </div>
+                <div>
+                    <button className="lfj">Looking for a job?</button>
+                    <button>Post a job</button>
+                </div>
+            </div>
             <div className="topFooter">
                 <div className="footerLeft">
                     <div className="logo">

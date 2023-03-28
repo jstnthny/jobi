@@ -89,15 +89,15 @@ export default function JobList(){
                                     value={keywordFilter}
                                     onChange={(e) => setKeywordFilter(e.target.value)}
                                 />
-                                <label htmlFor="salarySlider">Salary Slider</label>
+                                {/* <label htmlFor="salarySlider">Salary Slider</label>
                                  <div>
-                                <label>Minimum Salary:</label>
-                                <input type="range" value={minSalary} onChange={handleMinSalaryChange} />
+                                    <label>Minimum Salary:</label>
+                                    <input type="range" value={minSalary} onChange={handleMinSalaryChange} />
                                 </div>
                                 <div>
-                                <label>Maximum Salary:</label>
-                                <input type="range" value={maxSalary} onChange={handleMaxSalaryChange} />
-      </div>
+                                    <label>Maximum Salary:</label>
+                                    <input type="range" value={maxSalary} onChange={handleMaxSalaryChange} />
+                                </div> */}
                             </div>
                         </div>
                     )}
@@ -108,7 +108,7 @@ export default function JobList(){
                     <div className="jobListing" key={index}>
                         <div className="positionAndLogo">
                             <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="47.2022" height="50" fill="black" fill-opacity="0.2"/>
+                                <rect width="47.2022" height="50" fill="black" fillOpacity="0.2"/>
                             </svg>
                             <Link to={`/JobDetails/${job.id}`} key={index}>
                                 <h4>{job.jobPosition}</h4>
@@ -122,20 +122,21 @@ export default function JobList(){
                             <p>{job.location}</p>
                             <p>{Array.isArray(job.keywords) ? job.keywords.join(', ') : job.keywords}</p>
                         </div>
+                        <div className="jobButtons">
+                            <div className="bookmark">
+                                <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M34.4998 18.1501C34.4998 27.5419 26.8886 35.1551 17.4999 35.1551C8.11126 35.1551 0.5 27.5419 0.5 18.1501C0.5 8.7584 8.11126 1.14514 17.4999 1.14514C26.8886 1.14514 34.4998 8.7584 34.4998 18.1501Z" stroke="#D6D6D6"/>
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M20.3889 9.17383C23.0955 9.17383 24.6482 10.5522 24.6482 12.9535V24.8868C24.6482 25.3876 24.3977 25.8383 23.9764 26.0903C23.5567 26.3431 23.0508 26.3481 22.6263 26.1018L17.8707 23.3377L13.0712 26.1075C12.8638 26.2274 12.6364 26.2881 12.4082 26.2881C12.1728 26.2881 11.9374 26.2233 11.7235 26.0936C11.303 25.8415 11.0525 25.3908 11.0525 24.8909V12.8032C11.0525 10.4964 12.606 9.17383 15.315 9.17383H20.3889ZM20.3889 10.4053H15.315C13.2811 10.4053 12.2494 11.2114 12.2494 12.8032V24.8909C12.2494 24.9681 12.2925 25.0099 12.3284 25.0313C12.3643 25.0543 12.4209 25.0707 12.4864 25.0329L17.5787 22.0939C17.7606 21.9897 17.9832 21.9888 18.1659 22.0947L23.2144 25.0288C23.2806 25.0682 23.3372 25.0502 23.3732 25.028C23.4091 25.0058 23.4514 24.964 23.4514 24.8868L23.4511 12.8599C23.445 12.1534 23.3122 10.4053 20.3889 10.4053ZM20.7391 14.6976C21.0694 14.6976 21.3375 14.9734 21.3375 15.3133C21.3375 15.6532 21.0694 15.929 20.7391 15.929H14.8999C14.5696 15.929 14.3015 15.6532 14.3015 15.3133C14.3015 14.9734 14.5696 14.6976 14.8999 14.6976H20.7391Z" fill="#CBCBCB"/>
+                                </svg>
+                            </div>
+                            <button className="apply">
+                                Apply
+                            </button>
+                        </div>
                     </div>
                 ))}
             </div>
-            <div className="lookingForJobAd wrapper">
-                <div>
-                    <h4>Most complete job portal.</h4>
-                    <p>Signup and start find your job or talents.</p>
-                </div>
-                <div>
-                    <button className="lfj">Looking for a job?</button>
-                    <button>Post a job</button>
-                </div>
-            </div>
-            <Footer />
+                <Footer />
         </div>
     )
 }

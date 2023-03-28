@@ -16,6 +16,15 @@
         width: 100%;
     }
 
+    a{
+        font-family: variables.$gordita;
+        color: black;
+        text-decoration: none;
+        &:hover{
+            color: variables.$logoGreen;
+        }
+    }
+
 
 }
 
