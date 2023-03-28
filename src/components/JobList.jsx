@@ -5,6 +5,7 @@ import JobData from "./JobData.jsx";
 import SalarySlider from "./SalarySlider.jsx";
 import upArrow from "../assets/images/upArrow.svg";
 import downArrow from "../assets/images/downArrow.svg";
+import { Link } from 'react-router-dom';
 
 
 let jobData = JobData;
@@ -102,12 +103,6 @@ export default function JobList(){
                     )}
                 </div>
 
-                {/* <input
-                    type="text"
-                    placeholder="Filter by keyword"
-                    value={keywordFilter}
-                    onChange={e => setKeywordFilter(e.target.value)}
-                /> */}
                 <p className="jobTotal">All <span>{filteredJobsData.length}</span> jobs found</p>
                 {filteredJobsData.map((job, index) => (
                     <div className="jobListing" key={index}>
@@ -115,7 +110,9 @@ export default function JobList(){
                             <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="47.2022" height="50" fill="black" fill-opacity="0.2"/>
                             </svg>
-                            <h4>{job.jobPosition}</h4>
+                            <Link to={`/JobDetails/${job.id}`} key={index}>
+                                <h4>{job.jobPosition}</h4>
+                            </Link>
                         </div>
                         <div className="jobDate">
                             <p className="employmentType">{job.employmentType}</p>

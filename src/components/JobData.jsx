@@ -1,6 +1,7 @@
 
 const JobData = [
     {
+        id: 0,
         jobPosition: 'Software Developer',
         salary: 100000,
         location: 'San Francisco, CA',
@@ -9,6 +10,7 @@ const JobData = [
         keywords: ['software development', 'programming', 'web development']
     },
     {
+        id: 1,
         jobPosition: 'Marketing Manager',
         salary: 80000,
         location: 'New York City, NY',
@@ -17,6 +19,7 @@ const JobData = [
         keywords: ['marketing', 'digital marketing', 'social media']
     },
     {
+        id: 2,
         jobPosition: 'Accountant',
         salary: 65000,
         location: 'Chicago, IL',
@@ -25,6 +28,7 @@ const JobData = [
         keywords: ['accounting', 'bookkeeping', 'finance']
     },
     {
+    id: 3,
     jobPosition: 'Graphic Designer',
     salary: 60000,
     location: 'Los Angeles, CA',
@@ -33,6 +37,7 @@ const JobData = [
     keywords: ['graphic design', 'print design', 'Adobe Creative Suite']
     },
     {
+    id: 4,
     jobPosition: 'Customer Service Representative',
     salary: 40000,
     location: 'Dallas, TX',
@@ -41,6 +46,7 @@ const JobData = [
     keywords: ['customer service', 'phone support', 'problem-solving']
     },
     {
+    id: 5,
     jobPosition: 'Data Analyst',
     salary: 75000,
     location: 'Boston, MA',
@@ -49,6 +55,7 @@ const JobData = [
     keywords: ['data analysis', 'SQL', 'Excel']
     },
     {
+    id: 6,
     jobPosition: 'Event Coordinator',
     salary: 25000,
     location: 'Toronto, ON',
@@ -57,6 +64,7 @@ const JobData = [
     keywords: ['event planning', 'project management', 'communication']
     },
     {
+    id: 7,
     jobPosition: 'Administrative Assistant',
     salary: 18000,
     location: 'Toronto, ON',
