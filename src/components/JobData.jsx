@@ -7,7 +7,8 @@ const JobData = [
         location: 'San Francisco, CA',
         datePosted: '2023-03-27',
         employmentType: 'Full-time',
-        keywords: ['software development', 'programming', 'web development']
+        keywords: ['software development', 'programming', 'web development'],
+        expertise: 'Expert'
     },
     {
         id: 1,
@@ -16,7 +17,8 @@ const JobData = [
         location: 'New York City, NY',
         datePosted: '2023-03-25',
         employmentType: 'Full-time',
-        keywords: ['marketing', 'digital marketing', 'social media']
+        keywords: ['marketing', 'digital marketing', 'social media'],
+        expertise: 'Expert'
     },
     {
         id: 2,
@@ -25,7 +27,8 @@ const JobData = [
         location: 'Chicago, IL',
         datePosted: '2023-03-22',
         employmentType: 'Full-time',
-        keywords: ['accounting', 'bookkeeping', 'finance']
+        keywords: ['accounting', 'bookkeeping', 'finance'],
+        expertise: 'Intermediate'
     },
     {
     id: 3,
@@ -34,7 +37,8 @@ const JobData = [
     location: 'Los Angeles, CA',
     datePosted: '2023-03-28',
     employmentType: 'Full-time',
-    keywords: ['graphic design', 'print design', 'Adobe Creative Suite']
+    keywords: ['graphic design', 'print design', 'Adobe Creative Suite'],
+    expertise: 'Expert'
     },
     {
     id: 4,
@@ -43,7 +47,8 @@ const JobData = [
     location: 'Dallas, TX',
     datePosted: '2023-03-29',
     employmentType: 'Full-time',
-    keywords: ['customer service', 'phone support', 'problem-solving']
+    keywords: ['customer service', 'phone support', 'problem-solving'],
+    expertise: 'Beginner'
     },
     {
     id: 5,
@@ -52,7 +57,8 @@ const JobData = [
     location: 'Boston, MA',
     datePosted: '2023-03-30',
     employmentType: 'Full-time',
-    keywords: ['data analysis', 'SQL', 'Excel']
+    keywords: ['data analysis', 'SQL', 'Excel'],
+    expertise: 'Intermediate'
     },
     {
     id: 6,
@@ -61,7 +67,8 @@ const JobData = [
     location: 'Toronto, ON',
     datePosted: '2023-04-03',
     employmentType: 'Part-time',
-    keywords: ['event planning', 'project management', 'communication']
+    keywords: ['event planning', 'project management', 'communication'],
+    expertise: 'Beginner'
     },
     {
     id: 7,
@@ -70,7 +77,8 @@ const JobData = [
     location: 'Toronto, ON',
     datePosted: '2023-04-04',
     employmentType: 'Part-time',
-    keywords: ['administrative', 'office management', 'Microsoft Office']
+    keywords: ['administrative', 'office management', 'Microsoft Office'],
+    expertise: 'Beginner'
     }
 ];
 

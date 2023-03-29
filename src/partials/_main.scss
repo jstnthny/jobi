@@ -133,6 +133,7 @@ nav{
 
 .cardContainer{
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin: 60px 0 100px 0;
     justify-content: space-between;
