@@ -242,7 +242,6 @@ template {
 nav {
   display: flex;
   justify-content: space-around;
-  background-color: #E9EAEC;
   padding: 40px 0;
   align-items: center;
 }
@@ -255,7 +254,6 @@ nav ul {
 }
 nav ul a {
   text-decoration: none;
-  color: #0F1620;
 }
 nav ul .login, nav ul .register {
   padding: 16px 27px;
@@ -362,6 +360,7 @@ nav ul .register {
 
 .cardContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin: 60px 0 100px 0;
   justify-content: space-between;
@@ -418,6 +417,7 @@ nav ul .register {
 }
 .homePageExplore .exploreImageContainer {
   width: 45%;
+  background-color: #C3C3C3;
 }
 .homePageExplore .exploreImageContainer img {
   min-height: 100%;
@@ -579,7 +579,7 @@ nav ul .register {
   width: 100%;
 }
 .testimonialClientSearchContainer .tcsmLeft {
-  width: 60%;
+  width: 55%;
 }
 .testimonialClientSearchContainer .tcsmRight {
   width: 40%;
@@ -612,47 +612,6 @@ nav ul .register {
 }
 .qAndAHelp a {
   color: #00BF58;
-}
-
-.lookingForJobAd {
-  display: flex;
-  justify-content: space-between;
-}
-.lookingForJobAd div {
-  width: 40%;
-}
-.lookingForJobAd div:last-of-type {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.lookingForJobAd h4 {
-  font-family: "EB Garamond", serif;
-  font-size: 3.4rem;
-}
-.lookingForJobAd p {
-  font-weight: 300;
-  margin-top: 10px;
-  font-size: 1.25rem;
-}
-.lookingForJobAd button {
-  border: 2px solid #00BF58;
-  font-family: "Gordita";
-  border-radius: 5px;
-  padding: 15px 10px;
-  font-weight: bold;
-  margin: 10px;
-  cursor: pointer;
-}
-.lookingForJobAd button:first-of-type {
-  color: #00BF58;
-  background-color: white;
-  width: 190px;
-}
-.lookingForJobAd button:last-of-type {
-  background-color: #00BF58;
-  color: white;
-  width: 155px;
 }
 
 h1, h2, h3, h4, h5, p, button {
@@ -730,7 +689,7 @@ h1 span {
   padding: 10px 15px;
   fill: black;
   color: black;
-  transition: color 0.15s ease, fill 0.15 ease;
+  transition: 0.15s ease, fill 0.15 ease;
   font-weight: 600;
   border: 0;
   background-color: transparent;
@@ -792,6 +751,156 @@ h1 span {
   padding-bottom: 20px;
 }
 
+.listings .accordion {
+  background-color: #F0F6F4;
+  border-radius: 20px;
+  display: flex;
+  border: none;
+  padding: 20px;
+  font-family: "Gordita";
+}
+.listings .accordionContent {
+  padding: 10px 15px;
+}
+
+.jobFilterKeyword {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.jobFilterKeyword input {
+  width: 200px;
+}
+
+.jobList .listings {
+  border: none;
+}
+.jobList .jobListing {
+  border: 1px lightgrey solid;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.jobList .searchMenubg {
+  background-color: #254135;
+  padding-bottom: 100px;
+  width: 100%;
+}
+.jobList a {
+  font-family: "Gordita";
+  color: black;
+  text-decoration: none;
+}
+.jobList a:hover {
+  color: #00BF58;
+}
+
+.jobTotal {
+  font-family: "Gordita";
+  font-weight: 300;
+}
+.jobTotal span {
+  font-weight: bold;
+}
+
+input {
+  padding: 10px 10px;
+  font-family: "Gordita";
+  font-size: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+}
+
+.jobDetailsWrapper {
+  max-width: 1600px;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 4.5rem;
+}
+.jobDetailsWrapper .cardContainer {
+  gap: 0;
+  margin-top: 0;
+  padding-top: 3.5rem;
+}
+.jobDetailsWrapper .cardContainer .card {
+  max-width: 300px;
+  min-width: 200px;
+  padding: 80px 20px;
+  background-color: white;
+}
+
+.jobInfo h2 {
+  font-family: "Gordita";
+  font-size: 1.39rem;
+  margin-bottom: 1.1rem;
+}
+.jobInfo p, .jobInfo li {
+  font-family: "Gordita";
+  line-height: 2;
+}
+.jobInfo li {
+  margin: 1.2rem;
+}
+.jobInfo div {
+  margin: 3rem 0;
+}
+.jobInfo ul.responsibilities {
+  list-style: none;
+  padding-left: 0;
+}
+.jobInfo ul.responsibilities li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.jobInfo ul.responsibilities li::before {
+  content: "";
+  position: absolute;
+  left: 15%;
+  width: 1em;
+  height: 1em;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='%234F7B68'/%3E%3Cpath d='M4.6434 8.61868L7.59063 11.2446C8.45339 9.78577 10.5175 6.61148 11.8719 5.58504' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+}
+
+.jobDetailsBg {
+  background-color: #F0F6F4;
+}
+
+.jobDetailsTitle {
+  background-color: #254135;
+  width: 100%;
+  padding: 2rem 0 5rem 0;
+}
+.jobDetailsTitle h1 {
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.jobDetailsTitle ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 40px 0 0;
+}
+.jobDetailsTitle ul li {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #50655C;
+  border-radius: 5px;
+  gap: 5px;
+  padding: 5px 14px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.87rem;
+}
+.jobDetailsTitle ul li:last-of-type {
+  gap: 0;
+}
+
 .topFooter {
   display: flex;
   justify-content: space-between;
@@ -832,4 +941,166 @@ h1 span {
 .footerRight li a {
   text-decoration: none;
   color: black;
+}
+
+.bottomFooter {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+.bottomFooter p {
+  margin-right: 50px;
+  font-weight: 300;
+}
+.bottomFooter ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+.bottomFooter ul a {
+  color: black;
+  text-decoration: none;
+  font-family: "Gordita";
+  font-weight: bold;
+}
+.bottomFooter .socialIcons {
+  display: flex;
+  gap: 30px;
+}
+
+.lookingForJobAd {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding-top: 25px;
+}
+.lookingForJobAd div {
+  width: 40%;
+}
+.lookingForJobAd div:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.lookingForJobAd h4 {
+  font-family: "EB Garamond", serif;
+  font-size: 3.4rem;
+}
+.lookingForJobAd p {
+  font-weight: 300;
+  margin-top: 10px;
+  font-size: 1.25rem;
+}
+.lookingForJobAd button {
+  border: 2px solid #00BF58;
+  font-family: "Gordita";
+  border-radius: 5px;
+  padding: 15px 10px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+.lookingForJobAd button:first-of-type {
+  color: #00BF58;
+  background-color: white;
+  width: 190px;
+}
+.lookingForJobAd button:last-of-type {
+  background-color: #00BF58;
+  color: white;
+  width: 155px;
+}
+
+@media (max-width: 1075px) {
+  .cardContainer {
+    justify-content: normal;
+  }
+  .testimonials h2 {
+    width: 80%;
+  }
+  .testimonialCard {
+    width: 48%;
+  }
+  .testimonialCardAlt {
+    width: 48%;
+  }
+  .tcsmLeft img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+  .questionsAndAnswers > h2 {
+    font-size: 4rem;
+  }
+  .testimonials > h2 {
+    font-size: 4rem;
+  }
+  .jobListings h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  nav {
+    flex-wrap: wrap;
+  }
+  .accordion h4 {
+    font-size: 1.23rem;
+  }
+  .features {
+    flex-wrap: wrap;
+  }
+  .homePageExplore .homePageExplorerFlexContainer {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .exploreImageContainer {
+    display: none;
+  }
+  .homePageExplore .textContainer {
+    width: 100%;
+  }
+  .jobListings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .jobListing {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 15px;
+  }
+  .jobListings P:nth-child(3) {
+    width: 100%;
+  }
+  .card {
+    width: 300px;
+    text-align: center;
+  }
+  .cardContainer {
+    justify-content: center;
+  }
+  .testimonialClientSearchContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonialClientSearchContainer .tcsmLeft {
+    display: none;
+  }
+  .testimonialClientSearchContainer .tcsmRight {
+    width: 100%;
+  }
+  .testimonialClientSearchContainer .tcsmRight h2 {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+  .lookingForJobAd {
+    align-items: center;
+  }
 }/*# sourceMappingURL=App.css.map */
