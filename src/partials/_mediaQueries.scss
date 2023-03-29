@@ -1,0 +1,23 @@
+@use "./variables";
+
+@media (max-width: 1075px){
+    .cardContainer{
+        justify-content: normal;
+
+    }
+    .testimonials h2{
+        width: 80%;
+    }
+
+    .testimonialCard{
+        width: 48%;
+    }
+    .testimonialCardAlt{
+        width: 48%;
+    }
+    .tcsmLeft{
+        img{
+            max-width: 100%;
+        }
+    }
+}
