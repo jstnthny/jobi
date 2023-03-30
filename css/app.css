@@ -398,6 +398,10 @@ nav .bar {
   justify-self: center;
   padding: 80px 40px;
 }
+.card p:last-of-type {
+  width: 100%;
+  text-align: center;
+}
 
 .homePageExplore .homePageExplorerFlexContainer {
   display: flex;
@@ -1137,6 +1141,10 @@ input {
   }
   .lookingForJobAd {
     align-items: center;
+    flex-direction: column;
+  }
+  .lookingForJobAd div {
+    width: 100%;
   }
   .topFooter {
     flex-wrap: wrap;
@@ -1225,6 +1233,10 @@ input {
   justify-content: center;
 }
 
+.svgContainer img {
+  max-width: 100%;
+}
+
 .fourOhfour {
   font-family: "EB Garamond", serif;
   color: #254135;
@@ -1251,4 +1263,13 @@ p:last-of-type {
   text-decoration: none;
   color: black;
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .errText {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }/*# sourceMappingURL=App.css.map */

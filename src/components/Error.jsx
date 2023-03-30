@@ -8,7 +8,7 @@ export default function Error(){
         <div className="errorPage">
             <Header backgroundColor="#E9EAEC" aColor="black" color="black" />
             <div className="errorContainer wrapper">
-                <div>
+                <div className="svgContainer">
                     <img src={errorSvg} alt="" />
                 </div>
                 <div className="errText">

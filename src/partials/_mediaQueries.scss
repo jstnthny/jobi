@@ -44,12 +44,6 @@
 
     nav{
         flex-wrap: wrap;
-        // .navLogo{
-        //     flex-grow: 2;
-        // }
-        // .hamburger{
-        //     margin-right: 20px;
-        // }
     }
 
     .accordion h4{
@@ -139,7 +133,12 @@
     // Footer
     .lookingForJobAd{
         align-items: center;
+        flex-direction: column;
+        div{
+            width: 100%;
+        }
     }
+
 
     .topFooter{
         flex-wrap: wrap;

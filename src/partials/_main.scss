@@ -176,6 +176,10 @@ nav{
     gap: 20px;
     justify-self: center;
     padding: 80px 40px;
+    p:last-of-type{
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .homePageExplore{
