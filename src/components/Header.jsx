@@ -53,8 +53,8 @@ const Header = (props) => {
                 </button>
 
                 <ul className="loginRegContainer">
-                    <li className="login"><Link to="#" style={styles.a}>Login</Link></li>
-                    <li className="register"><Link to="#" style={styles.a}>Register</Link></li>
+                    <li className="login">Login</li>
+                    <li className="register">Register</li>
                 </ul>
             </nav>
         </header>
