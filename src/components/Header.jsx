@@ -1,4 +1,4 @@
-import {Link, Route, Routes} from "react-router-dom";
+import {Link} from "react-router-dom";
 import React, {useState} from 'react';
 
 
@@ -43,8 +43,8 @@ const Header = (props) => {
                     <li><Link to="#" style={styles.a}>Explore</Link></li>
                     <li><Link to="#" style={styles.a}>Category</Link></li>
                     <li><Link to="#" style={styles.a}>Pages</Link></li>
-                    <li className="login">Login</li>
-                    <li className="register">Register</li>
+                    <li className="login"><Link to="#" style={styles.a}>Login</Link></li>
+                    <li className="register"><Link to="#" style={styles.a}>Register</Link></li>
                 </ul>
                 <button className={`hamburger ${isClicked ? 'active' : ''}`} onClick={handleClick}>
                     <span className="bar"></span>
@@ -53,8 +53,8 @@ const Header = (props) => {
                 </button>
 
                 <ul className="loginRegContainer">
-                    <li className="login">Login</li>
-                    <li className="register">Register</li>
+                    <li className="login"><Link to="#" style={styles.a}>Login</Link></li>
+                    <li className="register"><Link to="#" style={styles.a}>Register</Link></li>
                 </ul>
             </nav>
         </header>

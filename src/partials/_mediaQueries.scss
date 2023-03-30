@@ -56,6 +56,11 @@
         font-size: 1.23rem;
     }
 
+
+    .searchMenu{
+        flex-direction: column;
+    }
+
     .features{
         flex-wrap: wrap;
     }
@@ -162,6 +167,7 @@
      nav{
         .hamburger{
             display: flex;
+            background-color: transparent;
         }
        }
        .navMenu, .loginRegContainer{

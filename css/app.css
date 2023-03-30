@@ -282,7 +282,7 @@ nav .bar {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: black;
+  background-color: #00BF58;
   border-radius: 10px;
 }
 
@@ -1072,6 +1072,9 @@ input {
   .accordion h4 {
     font-size: 1.23rem;
   }
+  .searchMenu {
+    flex-direction: column;
+  }
   .features {
     flex-wrap: wrap;
   }
@@ -1156,6 +1159,7 @@ input {
   }
   nav .hamburger {
     display: flex;
+    background-color: transparent;
   }
   .navMenu, .loginRegContainer {
     display: none;
@@ -1208,4 +1212,43 @@ input {
   .lookingForJobAd div {
     width: 100%;
   }
+}
+.errorContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.errText {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.fourOhfour {
+  font-family: "EB Garamond", serif;
+  color: #254135;
+  font-size: 6.3rem;
+}
+
+p:last-of-type {
+  font-family: "Gordita";
+  width: 90%;
+  line-height: 2;
+}
+
+.errorPage .errText a {
+  background-color: #D2F34C;
+  border: 1px solid #D2F34C;
+  border-radius: 40px;
+  display: flex;
+  padding: 10px 22px;
+  text-transform: uppercase;
+  font-family: "Gordita";
+  font-weight: bold;
+  justify-content: space-between;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
 }/*# sourceMappingURL=App.css.map */

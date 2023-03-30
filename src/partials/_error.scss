@@ -1,0 +1,46 @@
+@use "./variables";
+
+.errorContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.errText{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.fourOhfour{
+    font-family: variables.$garmond;
+    color: variables.$darkGreen;
+    font-size: 6.3rem;
+}
+
+p:last-of-type{
+    font-family: variables.$gordita;
+    width: 90%;
+    line-height: 2;
+}
+
+.errorPage{
+    .errText{
+        a{
+            background-color: #D2F34C;
+            border: 1px solid #D2F34C;
+            border-radius: 40px;
+            display: flex;
+            padding: 10px 22px;
+            text-transform: uppercase;
+            font-family: variables.$gordita;
+            font-weight: bold;
+            justify-content: space-between;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            margin-top: 20px;
+        }
+
+    }
+}

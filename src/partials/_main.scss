@@ -13,6 +13,7 @@ nav{
     justify-content: space-around;
     padding: 40px 0;
     align-items: center;
+
     ul{
         font-family: variables.$gordita;
         list-style: none;
@@ -56,11 +57,12 @@ nav{
         display: block;
         width: 100%;
         height: 3px;
-        background-color: black;
+        background-color: variables.$logoGreen;
         border-radius: 10px;
     }
 
 }
+
 
 // Home page Header
 
