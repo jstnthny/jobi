@@ -1,21 +1,41 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
-import JobData from "./JobData.jsx";
-import SalarySlider from "./SalarySlider.jsx";
+// import JobData from "./JobData.jsx"; 
 import upArrow from "../assets/images/upArrow.svg";
 import downArrow from "../assets/images/downArrow.svg";
 import { Link } from 'react-router-dom';
+import {db} from "../firebase-config";
+import {collection, getDocs} from 'firebase/firestore'
+ 
 
 
-let jobData = JobData;
 
 
 
-export default function JobList(){
+export default function JobList(props){
     const [isOpen, setIsOpen] = useState(false);
     const [minSalary, setMinSalary] = useState(0);
     const [maxSalary, setMaxSalary] = useState(1000000);
+
+    console.log(props.jobData)
+
+
+    // const [jobs, setJobs] = useState([]);
+    // const jobsCollectionRef = collection(db, "jobs")
+
+
+    // useEffect(() => {
+        
+    //     const getJobs = async () => {
+    //         const dataj = await getDocs(jobsCollectionRef)
+    //         setJobs(dataj.docs.map((doc) =>({...doc.data(), id: doc.id})))
+    //     }
+
+    //     getJobs()
+    // }, [])
+    // let jobData = jobs;
+    // console.log(jobs);
 
     const handleMinSalaryChange = (event) => {
         setMinSalary(event.target.value);
@@ -31,7 +51,7 @@ export default function JobList(){
     };
 
     const [keywordFilter, setKeywordFilter] = useState("");
-    const filteredJobsData = jobData.filter(job => {
+    const filteredJobsData = props.jobData.filter(job => {
         return( 
             job.salary >= minSalary && maxSalary <= maxSalary &&
             job.keywords.some(keyword => {
@@ -110,7 +130,7 @@ export default function JobList(){
                             <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="47.2022" height="50" fill="black" fillOpacity="0.2"/>
                             </svg>
-                            <Link to={`/JobDetails/${job.id}`} key={index}>
+                             <Link to={`/JobDetails/${job.id}`} key={index}>
                                 <h4>{job.jobPosition}</h4>
                             </Link>
                         </div>

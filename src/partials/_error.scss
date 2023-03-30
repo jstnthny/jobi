@@ -10,6 +10,11 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
+        p:last-of-type{
+        font-family: variables.$gordita;
+        width: 90%;
+        line-height: 2;
+    }
 }
 
 .svgContainer{
@@ -20,15 +25,11 @@
 
 .fourOhfour{
     font-family: variables.$garmond;
-    color: variables.$darkGreen;
+    color: #31795A;
     font-size: 6.3rem;
 }
 
-p:last-of-type{
-    font-family: variables.$gordita;
-    width: 90%;
-    line-height: 2;
-}
+
 
 .errorPage{
     .errText{

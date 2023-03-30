@@ -8,6 +8,7 @@ import photo from "../assets/images/placeholderImage.png"
 import mondayLogo from "../assets/images/mondayLogo.png"
 import testimonialsPlaceholder from "../assets/images/testimonialsPlaceholder.png"
 import QAndAData from "./QAndAData.jsx"
+import {Link} from "react-router-dom"
 
 export default function Home(){
 
@@ -143,7 +144,7 @@ export default function Home(){
                 <div className="jobListings wrapper">
                     <div className="jobListingsTitleContainer">
                         <h2>New job listing</h2>
-                        <a href="#">Explore all jobs {">"}</a>
+                        <Link to="/JobList">Explore all jobs {">"}</Link>
                     </div>
                     <div className="listings">
                         {/* Start of Job Listing */}

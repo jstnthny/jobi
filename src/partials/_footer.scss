@@ -50,6 +50,12 @@
     p{
         margin-right: 50px;
         font-weight: 300;
+        
+    }
+    p:last-of-type {
+    font-family: "Gordita";
+    width: fit-content;
+    line-height: 2;
     }
     ul{
         display: flex;
