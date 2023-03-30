@@ -1,4 +1,5 @@
-import {Link, Route, Routes} from "react-router-dom"
+import {Link, Route, Routes} from "react-router-dom";
+import React, {useState} from 'react';
 
 
 
@@ -18,10 +19,17 @@ const Header = (props) => {
         },
     }
 
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () =>{
+        setIsClicked(!isClicked);
+    }
+
+
     return(
         <header style={styles.header}>
             <nav>
-                <div>
+                <div className="navLogo">
                     <svg width="119" height="42" viewBox="0 0 119 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15.5" cy="22.5" r="15.5" fill="#00D462" fillOpacity="0.34"/>
                         <circle cx="30.5" cy="22.5" r="15.5" fill="#00D462"/>
@@ -29,15 +37,22 @@ const Header = (props) => {
                     </svg>
                 </div>
                 
-                <ul>
+                <ul className={`navMenu ${isClicked ? 'active' : ''}`} onClick={handleClick} >
                     <li><Link to="/" style={styles.a}>Home</Link></li>
                     <li><Link to="/JobList" style={styles.a}>Job</Link></li>
                     <li><Link to="#" style={styles.a}>Explore</Link></li>
                     <li><Link to="#" style={styles.a}>Category</Link></li>
                     <li><Link to="#" style={styles.a}>Pages</Link></li>
+                    <li className="login">Login</li>
+                    <li className="register">Register</li>
                 </ul>
+                <button className={`hamburger ${isClicked ? 'active' : ''}`} onClick={handleClick}>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </button>
 
-                <ul>
+                <ul className="loginRegContainer">
                     <li className="login">Login</li>
                     <li className="register">Register</li>
                 </ul>
