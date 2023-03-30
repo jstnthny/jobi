@@ -19,6 +19,13 @@
 
 .footerLeft{
     width: 20%;
+    p{
+        color: variables.$logoGreen;
+        border-bottom: 1px solid variables.$logoGreen;
+        font-weight: bold;
+        width: fit-content;
+        padding-bottom: 5px;
+    }
 }
 
 .footerRight{

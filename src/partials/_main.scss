@@ -69,7 +69,7 @@ nav{
 .homePageHeader{
     background-color: variables.$headerBg;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 8rem;
     .cvUpload{
         p{
             border-bottom: 1px solid black;
@@ -142,7 +142,7 @@ nav{
 .categoriesTitle{
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
+    padding-top: 8em;
     align-items: center;
     h2{
         font-family: variables.$gordita;

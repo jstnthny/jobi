@@ -1,13 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
-// import JobData from "./JobData.jsx"; 
 import upArrow from "../assets/images/upArrow.svg";
 import downArrow from "../assets/images/downArrow.svg";
 import { Link } from 'react-router-dom';
-import {db} from "../firebase-config";
-import {collection, getDocs} from 'firebase/firestore'
- 
+
 
 
 
@@ -20,30 +17,6 @@ export default function JobList(props){
 
     console.log(props.jobData)
 
-
-    // const [jobs, setJobs] = useState([]);
-    // const jobsCollectionRef = collection(db, "jobs")
-
-
-    // useEffect(() => {
-        
-    //     const getJobs = async () => {
-    //         const dataj = await getDocs(jobsCollectionRef)
-    //         setJobs(dataj.docs.map((doc) =>({...doc.data(), id: doc.id})))
-    //     }
-
-    //     getJobs()
-    // }, [])
-    // let jobData = jobs;
-    // console.log(jobs);
-
-    const handleMinSalaryChange = (event) => {
-        setMinSalary(event.target.value);
-    };
-
-    const handleMaxSalaryChange = (event) => {
-        setMaxSalary(event.target.value);
-    };
 
 
     const toggleAccordion = () => {
