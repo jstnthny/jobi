@@ -54,6 +54,9 @@
     .searchMenu{
         flex-direction: column;
         gap: 10px;
+        div{
+            border: none;
+        }
     }
 
     .features{
