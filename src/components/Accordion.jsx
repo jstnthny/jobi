@@ -44,7 +44,7 @@ const Accordion = ({items, keepOthersOpen}) => {
                         <button className="toggle" onClick={() => handleAccordionToggle(listItem)}>
                             <h4>{listItem.label}</h4>
                             <div className="directionIndicator">
-                                {listItem.toggled ? <img src={upArrow} /> : <img src={downArrow} />}
+                                {listItem.toggled ? <img src={upArrow} alt="" /> : <img src={downArrow} alt="" />}
                             </div>
                         </button>
                         <div className="contentParent">

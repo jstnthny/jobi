@@ -56,14 +56,14 @@ export default function Footer(){
                 </div>
                 <div className="footerRight">
                     <ul>
-                        <h5>Links</h5>
+                        <li><h5>Links</h5></li>
                         <li><a href="#">Pricing</a></li>
                         <li><a href="#">About us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
                     <ul>
-                        <h5>Products</h5>
+                        <li><h5>Products</h5></li>
                         <li><a href="#">Take the tour</a></li>
                         <li><a href="#">Live chat</a></li>
                         <li><a href="#">Self-service</a></li>
@@ -72,7 +72,7 @@ export default function Footer(){
                         <li><a href="#">Reviews</a></li>
                     </ul>
                     <ul>
-                        <h5>Legal</h5>
+                        <li><h5>Legal</h5></li>
                         <li><a href="#">Terms of use</a></li>
                         <li><a href="#">Terms & conditions</a></li>
                         <li><a href="#">Privacy</a></li>

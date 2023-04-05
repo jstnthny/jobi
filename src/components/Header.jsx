@@ -46,7 +46,7 @@ const Header = (props) => {
                     <li className="login"><Link to="#" style={styles.a}>Login</Link></li>
                     <li className="register"><Link to="#" style={styles.a}>Register</Link></li>
                 </ul>
-                <button className={`hamburger ${isClicked ? 'active' : ''}`} onClick={handleClick}>
+                <button className={`hamburger ${isClicked ? 'active' : ''}`} onClick={handleClick} aria-label="Hamburger Menu">
                     <span className="bar"></span>
                     <span className="bar"></span>
                     <span className="bar"></span>
