@@ -9,6 +9,7 @@ import mondayLogo from "../assets/images/mondayLogo.png"
 import testimonialsPlaceholder from "../assets/images/testimonialsPlaceholder.png"
 import QAndAData from "./QAndAData.jsx"
 import {Link} from "react-router-dom"
+import guySittingDown from "../assets/images/guySittingDownOnDesk.jpg"
 
 export default function Home(){
 
@@ -18,7 +19,7 @@ export default function Home(){
             <div className="homepage">
                 <div className="homePageHeader">
                     <h1>Find your job without <span>any hassle.</span></h1>
-                    <p>Jobs & Job search. Find jobs in global. Executive jobs & work.</p>
+                    <p className="headerText">Jobs & Job search. Find jobs in global. Executive jobs & work.</p>
                     <div className="searchMenu">
                         <div>
                             <label htmlFor="jobCategories">Job Categories</label>
@@ -115,7 +116,7 @@ export default function Home(){
                     <div className="homePageExplore">
                         <div className="homePageExplorerFlexContainer">
                             <div className="exploreImageContainer">
-                                <img src={photo} alt="An image of a guy sitting on a desk" />
+                                <img src={guySittingDown} alt="An image of a guy sitting on a desk" />
                             </div>
                             <div className="textContainer">
                                 <h3>Get the job of your dreams quickly.</h3>
