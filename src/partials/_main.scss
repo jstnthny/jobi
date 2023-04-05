@@ -159,7 +159,7 @@ nav{
     align-items: center;
     h2{
         font-family: variables.$gordita;
-        font-size: 2.25rem;
+        font-size: clamp(1.9rem, 2.25rem, 2.25rem);
     }
     a{
         color: variables.$logoGreen;
@@ -221,7 +221,7 @@ nav{
         h3{
             font-family: variables.$garmond;
             color: white;
-            font-size: 4.5rem;
+            font-size: clamp(4rem, 4.5rem, 4.5rem);
         }
         p{
             font-size: 1.25rem;
@@ -257,7 +257,7 @@ nav{
     margin-top: 40px;
     h3{
         font-family: variables.$gordita;
-        font-size: 3.25rem;
+        font-size: clamp(3rem, 3.25rem, 3.25rem);
     }
     p{
         text-align: center;
@@ -301,7 +301,7 @@ nav{
     }
     h2{
         font-family: variables.$garmond;
-        font-size: 4.5rem;
+        font-size: clamp(4rem, 4.5rem, 4.5rem);
     }
 }
 
@@ -370,7 +370,7 @@ nav{
 .testimonials{
     margin-top: 80px;
     h2{
-        font-size: 4.5rem;
+        font-size: clamp(4rem, 4.5rem, 4.5rem);
         width: 55%;
         margin-bottom: 40px;
     }
@@ -411,11 +411,14 @@ nav{
     }
     h2{
         font-family: variables.$garmond;
-        font-size: 4.7rem;
+        font-size: clamp(3.9rem, 4.7rem, 4.7rem);
         width: 100%;
     }
     .tcsmLeft{
        width: 55%;
+       img{
+        width: 100%;
+       }
     }
 
     .tcsmRight{

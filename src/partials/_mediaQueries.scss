@@ -1,5 +1,11 @@
 @use "./variables";
 
+@media(max-width:1440px){
+    .testimonialCard, .testimonialCardAlt{
+        width: 630px;
+    }
+}
+
 @media (max-width: 1075px){
     .cardContainer{
         justify-content: center;
@@ -26,6 +32,13 @@
         width: 50%;
     }
 }
+
+@media(max-width: 863px){
+    .homePageHeader{
+        height: 100%;
+    }
+}
+
 
 @media(max-width: 800px){
 
@@ -200,6 +213,8 @@
         flex-direction: column;
        }
 }
+
+
 
 @media(max-width: 425px){
     .searchMenu{
