@@ -148,6 +148,7 @@ export default function JobDetails(props){
                                 <li>Monthly wellness/gym stipend</li>
                             </ul>
                         </div>
+                        <button className="applyNowBtn">Apply For This Position</button>
                     </div>
                 </div>
             </div>
