@@ -82,15 +82,6 @@ export default function JobList(props){
                                     value={keywordFilter}
                                     onChange={(e) => setKeywordFilter(e.target.value)}
                                 />
-                                {/* <label htmlFor="salarySlider">Salary Slider</label>
-                                 <div>
-                                    <label>Minimum Salary:</label>
-                                    <input type="range" value={minSalary} onChange={handleMinSalaryChange} />
-                                </div>
-                                <div>
-                                    <label>Maximum Salary:</label>
-                                    <input type="range" value={maxSalary} onChange={handleMaxSalaryChange} />
-                                </div> */}
                             </div>
                         </div>
                     )}
@@ -100,9 +91,10 @@ export default function JobList(props){
                 {filteredJobsData.map((job, index) => (
                     <div className="jobListing" key={index}>
                         <div className="positionAndLogo">
-                            <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            {/* <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="47.2022" height="50" fill="black" fillOpacity="0.2"/>
-                            </svg>
+                            </svg> */}
+                            <img src={job.logo} alt="" />
                              <Link to={`/JobDetails/${job.id}`} key={index}>
                                 <h4>{job.jobPosition}</h4>
                             </Link>

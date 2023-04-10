@@ -8,6 +8,11 @@
         border: 1px lightgrey solid;
         margin: 20px 0;
         border-radius: 10px;
+        .positionAndLogo{
+            img{
+                max-width: 100px;
+            }
+        }
     }
 
     .searchMenubg{
