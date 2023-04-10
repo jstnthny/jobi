@@ -10,17 +10,6 @@ import {collection, getDocs} from 'firebase/firestore'
 
 function App() {
 
-  //   const [jobs, setJobs] = useState([]);
-  //     useEffect(() => {
-  //   const fetchJobs = async () => {
-  //     const jobsCollectionRef = collection(db, "jobs");
-  //     const data = await getDocs(jobsCollectionRef);
-  //     const jobsData = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-  //     setJobs(jobsData);
-  //   };
-  //   fetchJobs();
-  // }, []);
-
     const [jobs, setJobs] = useState([]);
     const jobsCollectionRef = collection(db, "jobs")
 
@@ -35,16 +24,12 @@ function App() {
         getJobs()
     }, [])
     let jobData = jobs;
-    console.log(jobData);
 
   return (
     <div className="App">
-     {/* <Home /> */}
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/JobList" element={<JobList jobData={jobs}/>}/>
-      {/* <Route path="/JobList" element={jobs.length ? <JobList jobData={jobs} /> : <div>Loading...</div>} /> */}
-      {/* <Route path="JobDetails/:id" element={<JobDetails jobData={jobs} />}/> */}
       <Route path="/JobDetails/:id" element={jobs.length ? <JobDetails jobData={jobs} /> : <div>""</div>} />
       <Route path="*" element={<Error />} />
     </Routes>

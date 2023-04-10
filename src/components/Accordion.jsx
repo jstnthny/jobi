@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
 import upArrow from "../assets/images/upArrow.svg";
 import downArrow from "../assets/images/downArrow.svg";
-// import "./Accordion.css"
 
 const Accordion = ({items, keepOthersOpen}) => {
 
