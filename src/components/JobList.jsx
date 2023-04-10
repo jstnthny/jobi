@@ -12,10 +12,7 @@ import { Link } from 'react-router-dom';
 
 export default function JobList(props){
     const [isOpen, setIsOpen] = useState(false);
-    const [minSalary, setMinSalary] = useState(0);
-    const [maxSalary, setMaxSalary] = useState(1000000);
 
-    console.log(props.jobData)
 
 
 
@@ -26,7 +23,6 @@ export default function JobList(props){
     const [keywordFilter, setKeywordFilter] = useState("");
     const filteredJobsData = props.jobData.filter(job => {
         return( 
-            job.salary >= minSalary && maxSalary <= maxSalary &&
             job.keywords.some(keyword => {
             return keyword.toLowerCase().includes(keywordFilter.toLowerCase());
         }))

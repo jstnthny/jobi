@@ -1,22 +1,16 @@
-// import JobData from "./JobData.jsx";
 import {useParams} from "react-router-dom";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
-import {db} from "../firebase-config";
-import {collection, getDocs} from 'firebase/firestore'
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
     
 
 export default function JobDetails(props){
 
-    console.log(props);
     const {id} = useParams();
     let jobData = props.jobData;
     const job = jobData.find(job => job.id === id);
 
-    console.log(job)
-    console.log(job.datePosted)
 
 
    
