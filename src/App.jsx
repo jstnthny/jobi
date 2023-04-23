@@ -11,7 +11,14 @@ import {collection, getDocs} from 'firebase/firestore'
 function App() {
 
     const [jobs, setJobs] = useState([]);
-    const jobsCollectionRef = collection(db, "jobs")
+    const jobsCollectionRef = collection(db, "jobs");
+
+    // Pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postPerPage, setPostPerPage] = useState(5);
+    const lastPostIndex = currentPage * postPerPage;
+    const firstPostIndex = lastPostIndex - postPerPage;
+    const currentPosts = jobs.slice(firstPostIndex, lastPostIndex)
 
 
     useEffect(() => {
@@ -23,13 +30,13 @@ function App() {
 
         getJobs()
     }, [])
-    let jobData = jobs;
+    // let jobData = jobs;
 
   return (
     <div className="App">
     <Routes>
       <Route path="/" element={<Home />}/>
-      <Route path="/JobList" element={<JobList jobData={jobs}/>}/>
+      <Route path="/JobList" element={<JobList jobData={currentPosts} postPerPage={postPerPage} totalJobs={jobs} setCurrentPage={setCurrentPage}/>}/>
       <Route path="/JobDetails/:id" element={jobs.length ? <JobDetails jobData={jobs} /> : <div>""</div>} />
       <Route path="*" element={<Error />} />
     </Routes>

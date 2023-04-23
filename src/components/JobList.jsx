@@ -4,6 +4,7 @@ import Footer from "./Footer.jsx";
 import upArrow from "../assets/images/upArrow.svg";
 import downArrow from "../assets/images/downArrow.svg";
 import { Link } from 'react-router-dom';
+import { Pagination } from './Pagination.jsx';
 
 
 
@@ -13,8 +14,7 @@ import { Link } from 'react-router-dom';
 export default function JobList(props){
     const [isOpen, setIsOpen] = useState(false);
 
-
-
+    console.log(props)
 
     const toggleAccordion = () => {
         setIsOpen(!isOpen);
@@ -87,10 +87,7 @@ export default function JobList(props){
                 {filteredJobsData.map((job, index) => (
                     <div className="jobListing" key={index}>
                         <div className="positionAndLogo">
-                            {/* <svg width="48" height="50" viewBox="0 0 48 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="47.2022" height="50" fill="black" fillOpacity="0.2"/>
-                            </svg> */}
-                            <img src={job.logo} alt="" />
+                            <img src={job.logo} alt="Company Logo" />
                              <Link to={`/JobDetails/${job.id}`} key={index}>
                                 <h4>{job.jobPosition}</h4>
                             </Link>
@@ -117,6 +114,7 @@ export default function JobList(props){
                     </div>
                 ))}
             </div>
+                <Pagination totalPosts={props.totalJobs.length} postsPerPage={props.postPerPage} setCurrentPage={props.setCurrentPage}/>
                 <Footer />
         </div>
     )
