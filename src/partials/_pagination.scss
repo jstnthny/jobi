@@ -1,0 +1,21 @@
+@use "./variables";
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    button{
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin: 10px;
+        font-weight: bold;
+        color: #457963;
+        font-size: 1.1rem;
+    }
+    button.active{
+        background-color: #457963;
+        color: white;
+        border-radius: 50%;
+        padding: 7px 12px;
+    }
+}

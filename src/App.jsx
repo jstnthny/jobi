@@ -36,7 +36,7 @@ function App() {
     <div className="App">
     <Routes>
       <Route path="/" element={<Home />}/>
-      <Route path="/JobList" element={<JobList jobData={currentPosts} postPerPage={postPerPage} totalJobs={jobs} setCurrentPage={setCurrentPage}/>}/>
+      <Route path="/JobList" element={<JobList jobData={currentPosts} postPerPage={postPerPage} totalJobs={jobs} setCurrentPage={setCurrentPage} currentPage={currentPage}/>}/>
       <Route path="/JobDetails/:id" element={jobs.length ? <JobDetails jobData={jobs} /> : <div>""</div>} />
       <Route path="*" element={<Error />} />
     </Routes>

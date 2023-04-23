@@ -83,7 +83,7 @@ export default function JobList(props){
                     )}
                 </div>
 
-                <p className="jobTotal">All <span>{filteredJobsData.length}</span> jobs found</p>
+                <p className="jobTotal">All <span>{props.totalJobs.length}</span> jobs found</p>
                 {filteredJobsData.map((job, index) => (
                     <div className="jobListing" key={index}>
                         <div className="positionAndLogo">
@@ -114,7 +114,7 @@ export default function JobList(props){
                     </div>
                 ))}
             </div>
-                <Pagination totalPosts={props.totalJobs.length} postsPerPage={props.postPerPage} setCurrentPage={props.setCurrentPage}/>
+                <Pagination totalPosts={props.totalJobs.length} postsPerPage={props.postPerPage} setCurrentPage={props.setCurrentPage} currentPage={props.currentPage}/>
                 <Footer />
         </div>
     )
